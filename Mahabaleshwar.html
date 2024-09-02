@@ -1,0 +1,259 @@
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    /* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Global styles */
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to left, #ffcccc, #d4ebf2);
+  font-size: 16px;
+}
+.filter {
+      background-color: #fff;
+      border: 2px solid black;
+      padding: 10px;
+      margin-bottom: 20px;
+    }
+
+    /* Style for the label and select elements within the filter container */
+    .filter label {
+      font-weight: bold;
+    }
+
+    .filter select {
+      width: 100px;
+      padding: 5px;
+    }
+
+    /* Style for the Apply Filters button */
+    .filter button {
+      background-color: #244572;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+
+    .filter button:hover {
+      background-color: #44b4d5;
+    }
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Heading styles */
+.heading {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Hotel styles */
+.hotel {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  border: 2px solid black;
+  padding: 20px;
+  background-color: #fff;
+}
+
+.hotel img {
+  width: 300px;
+  height: auto;
+  margin-right: 20px;
+  object-fit: cover;
+}
+
+.hotel-description {
+  flex: 1;
+}
+
+/* Hotel name styles */
+.hotel-name {
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: #333;
+}
+
+/* Location styles */
+.location {
+  font-size: 1rem;
+  color: #666;
+  margin-top: 10px;
+}
+
+/* Description styles */
+.description {
+  font-size: 1rem;
+  color: #333;
+  margin-top: 10px;
+}
+
+/* View details button styles */
+.view-details-button {
+  background-color: #244572;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 10px;
+}
+
+.view-details-link {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+/* View details button styles */
+.view-details-button {
+  background-color: #244572;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 10px;
+  transition: background-color 0.3s ease; /* Adding a smooth transition effect */
+}
+
+.view-details-button:hover {
+  background-color: #44b4d5; 
+}
+
+.view-details-link {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* View details link styles */
+.view-details-link {
+  text-decoration: none; /* Remove underline */
+  color: #fff; /* Set the desired color */
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: color 0.3s ease; /* Adding a smooth transition effect */
+}
+
+.view-details-link:hover {
+  color: #fff; /* Ensure the color stays the same on hover */
+}
+/* Hotel name styles */
+.hotel-name a {
+  text-decoration: none; /* Remove underline */
+  color: #400564; /* Set the desired color */
+}
+
+/* Hotel name hover effect */
+.hotel-name a:hover {
+  color: #591050; /* Ensure the color stays the same on hover */
+}
+
+
+
+  </style>
+  <title>Hotels in Mahabaleshwar</title>
+</head>
+<body>
+<div class="container">
+  <h1 class="heading">Hotels in Mahabaleshwar</h1>
+  <div class="filter">
+    <h2>Price Range Filter</h2>
+    <label for="priceRange">Select Price Range:</label>
+    <select id="priceRange">
+      <option value="all">All</option>
+      <option value="2000-3000">2000 - 3000</option>
+      <option value="3000-4000">3000 - 4000</option>
+
+    </select>
+    <button id="filterButton">Apply Filters</button>
+  </div>
+  <div class="hotel" data-price="2293">
+    <img src="https://lh3.googleusercontent.com/p/AF1QipOLcDZuq-xCO-WYQbSdbPMACJL5k83Iio9XlYG9=w480-h360-n-k-rw-no-v1" alt="Hotel Forest View, Mahabaleshwar">
+    <div class="hotel-description">
+<div class="hotel-name">
+      <h2><a href="M1.html">Hotel Forest View, Mahabaleshwar</a></h2>
+    </div>
+      <p class="location">
+        Hotel Forest View, 299/B, Behind hotel Latanand Residency, Tanu Patel Street Main Market, Mahabaleshwar, Maharashtra 412806<br>
+        <br>
+       
+                 Price per night: &#8377; 2293
+      </p>
+      <p class="description">
+        Compact rooms, some with forest views, in a straightforward hotel set in the mountains.
+      </p>
+      <button class="view-details-button"><a href="M1.html" class="view-details-link">View Details</a></button>
+    </div>
+  </div>
+
+  <div class="hotel" data-price="1094">
+    <img src="https://lh3.googleusercontent.com/p/AF1QipPePEIYkvGJoroq_-uwL22mEpr8VxMamWcLeNw4=w287-h192-n-k-rw-no-v1" alt=" C.P. Cottage - Hotel on Mahabaleshwar Road">
+           
+    <div class="hotel-description">
+        <div class="hotel-name">
+                <h2><a href="M2.html"> C.P. Cottage - Hotel on Mahabaleshwar Road</a></h2></div>
+                <p class="location">
+                    Gadalwadi, Mahabaleshwar, Maharashtra 412806
+                <br> Price per night: &#8377; 1094
+                </p>
+      <p class="description">
+        Great location overall for sightseeing, recreation, dining, and getting around
+      </p>
+      <button class="view-details-button"><a href="M2.html" class="view-details-link">View Details</a></button>
+    </div>
+  </div>
+
+  <div class="hotel" data-price="3854">
+    <img src="https://lh5.googleusercontent.com/p/AF1QipPahUAgzMOV529VhBnzu2NUzbh9VCB-_5csHbaD=w592-h404-n-k-no" alt="Regenta MPG Club Mahabaleshwar">
+    <div class="hotel-description">
+        <div class="hotel-name"> <h2><a href="M3.html">Regenta MPG Club Mahabaleshwar</a></h2></div>
+        3-star hotel<br>
+        CTS No 233, Old, Tapola Rd, Mahabaleshwar, Maharashtra 412806
+                <p class="location">
+                    
+                Price per night: &#8377; 3854</p>
+      <p class="description">
+        Family-friendly resort with a swimming pool, kids' club, and multiple restaurants.
+      </p>
+      <button class="view-details-button"><a href="M3.html" class="view-details-link">View Details</a></button>
+    </div>
+  </div>
+  <script>
+    const priceRangeSelect = document.getElementById('priceRange');
+    const filterButton = document.getElementById('filterButton');
+    const hotels = document.querySelectorAll('.hotel');
+  
+    filterButton.addEventListener('click', applyFilters);
+  
+    function applyFilters() {
+      const selectedPriceRange = priceRangeSelect.value;
+  
+      hotels.forEach((hotel) => {
+        const price = parseInt(hotel.getAttribute('data-price'));
+  
+        if (selectedPriceRange === 'all' || (price >= parseInt(selectedPriceRange.split('-')[0]) && price <= parseInt(selectedPriceRange.split('-')[1]))) {
+          hotel.style.display = 'flex';
+        } else {
+          hotel.style.display = 'none';
+        }
+      });
+    }
+  </script>
+</body>
+</html>
+

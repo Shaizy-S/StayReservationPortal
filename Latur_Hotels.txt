@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Hotels</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    /* Reset CSS */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Global styles */
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to left, #ffcccc, #d4ebf2);
+      font-size: 16px;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    /* Heading styles */
+    .heading {
+      font-size: 2rem;
+      text-align: center;
+      margin-bottom: 30px;
+      color: #004080;
+    }
+
+    /* Hotel styles */
+    .hotel {
+      display: flex;
+      align-items: center;
+      margin-bottom: 30px;
+      border: 2px solid black;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    }
+    .hn {
+      font-size: 1.5rem;
+      text-decoration: none !important;
+      color: #333;
+    }
+
+    .hotel img {
+      width: 350px;
+      height: auto;
+      margin-right: 20px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .hotel-description {
+      flex: 1;
+    }
+
+    /* Hotel name styles */
+   
+
+    /* Location styles */
+    .location {
+      font-size: 1rem;
+      color: #666;
+      margin-top: 10px;
+    }
+
+    /* Description styles */
+    .description {
+      font-size: 1rem;
+      color: #333;
+      margin-top: 10px;
+    }
+
+    /* View details button styles */
+    .view-details-button {
+      background-color: #244572;
+      border: none;
+      padding: 10px 20px;
+      margin-top: 10px;
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      text-transform: uppercase;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+    .view-details-link {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+    .view-details-button:hover {
+      background-color: #44b4d5;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1 class="heading">Hotels in Latur</h1>
+
+    <div class="hotel">
+      <img src="https://pix8.agoda.net/hotelImages/44318847/0/5570848f480f7444b0e81959f85bf1ab.jpg?ce=0&s=450x450" alt="Hotel 1">
+      <div class="hotel-description">
+        <h1 class="hotel-name"><a href="#" class="hn">Hotel Utsav Square</a></h1>
+        <p class="location">Road, Latur MIDC, MIDC, Hotel Utsav Square, Latur, Latur, India, 413531</p>
+        <p class="description">&#8377; 2794 1 room per night<br>Conveniently situated in the Latur part of Latur, this property puts you close to attractions and interesting dining options. This 3-star property is packed with in-house facilities to improve the quality and joy of your stay.</p>
+        <button class="view-details-button"><a href="#" class="view-details-link">View Details</a></button>
+      </div>
+    </div>
+
+    <div class="hotel">
+      <img src="https://pix8.agoda.net/hotelImages/35510086/0/0f44f17c5c0e98ea0e43e1504c37df3e.jpg?ce=0&s=450x450" alt="Hotel 2">
+      <div class="hotel-description">
+        <h1 class="hotel-name"><a href="#" class="hn">Hotel Sudarshan Palace
+        </a></h1>
+        <p class="location">MG Rd, Latur, Latur, India, 413531 </p>
+        <p class="description">&#8377; 1612 1 room per night<br>The car parking and the Wi-Fi are always free, so you can stay in touch and come and go as you please. Conveniently situated in the Latur part of Latur, this property puts you close to attractions and interesting dining options. This 3-star property is packed with in-house facilities to improve the quality and joy of your stay.</p>
+        <button class="view-details-button"><a href="#" class="view-details-link">View Details</a></button>
+      </div>
+    </div>
+
+    <div class="hotel">
+      <img src="https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/445630359.jpg?k=4eda177a8703ee0d658913ca96a0f41ee9807d1c6b8ad0ed7d34b1012ca098db&o=" alt="Hotel 3">
+      <div class="hotel-description">
+        <h1 class="hotel-name"><a href="#" class="hn">Hotel City Centre Latur</a></h1>
+        <p class="location">Shivaji Road Ganj Golai, Latur, Latur, Latur, India, 413512 </p>
+        <p class="description">&#8377; 3508 1 room per night<br>Conveniently situated in the Latur part of Latur, this property puts you close to attractions and interesting dining options. This 4-star property is packed with in-house facilities to improve the quality and joy of your stay.</p>
+        <button class="view-details-button"><a href="#" class="view-details-link">View Details</a></button>
+      </div>
+    </div>
+
+    <div class="hotel">
+      <img src="https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/468653037.jpg?k=0fc79939775d306a58d4859bca92261308942a6845fce8a5583310ddc2dcd170&o=" alt="Hotel 4">
+      <div class="hotel-description">
+        <h1 class="hotel-name"><a href="#" class="hn">Aroma Hotel Latur - Best Hotel in Latur</a></h1>
+        <p class="location"> A74/1 Old M.I.D.C. Barshi Road, Latur Near 1 No Chowk Latur, Latur, Latur, India, 413531</p>
+        <p class="description">&#8377; 3710 1 room per night<br>Conveniently situated in the Latur part of Latur, this property puts you close to attractions and interesting dining options..</p>
+        <button class="view-details-button"><a href="#" class="view-details-link">View Details</a></button>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

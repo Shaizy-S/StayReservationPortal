@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adventure Avenues</title>
+    <link rel="icon" href="file:///D:/VSCode/Logo.jpg" type="image/png">
+<link rel="shortcut icon" href="file:///D:/VSCode/Logo.jpg" type="image/png">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+<!-- Bootstrap 5 CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+<!-- Bootstrap 5 JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+<!-- Font Awesome 4-->
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <style>
+
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .box {
+            margin: 20px auto;
+            text-align: center;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+        }
+
+        header {
+            padding: 20px 0;
+        }
+
+        header img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        section.booking {
+            margin-top: 20px;
+        }
+
+        form {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-color: #4caf50;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        #error {
+            color: red;
+            margin-top: 10px;
+        }
+
+        footer {
+            margin-top: 20px;
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+        }
+        
+        
+        /* Additional styles for the new slide */
+#main-slider {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.swiper-slide {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Adjust the overlay color and transparency */
+}
+
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+}
+
+/* Optional: Add styles for Swiper navigation and pagination */
+.swiper-pagination{
+    position: absolute;
+    z-index: 10;
+}
+html, body {
+    overflow-x: hidden;
+}
+
+.box {
+    overflow-x: hidden;
+}
+
+.swiper-slide {
+    overflow-x: hidden;
+}
+
+    body {
+        font-family: 'Arial', sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+        overflow-x: hidden; /* Disable horizontal scrolling for the entire page */
+    }
+
+    .box {
+        margin: 20px auto;
+        text-align: center;
+        background-color: #fff;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        max-width: 800px;
+        overflow-x: hidden; /* Disable horizontal scrolling for the box */
+    }
+
+    .swiper-slide {
+        position: relative;
+        background-size: cover;
+        background-position: center;
+        overflow-x: hidden; /* Disable horizontal scrolling for each slide */
+    }
+
+    body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    overflow-x: hidden; /* Disable horizontal scrolling for the entire page */
+    background-image: url('https://wallpapercave.com/wp/wp7213366.jpg'); /* Replace with the path to your background image */
+    background-size: cover;
+    background-position: center;
+}
+
+.box {
+    margin: 20px auto;
+    text-align: center;
+    background-color: #d9f1f4;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    overflow-x: hidden; /* Disable horizontal scrolling for the box */
+    position: relative; /* Add position relative */
+    z-index: 1; /* Set a higher z-index to keep the content above the background */
+}
+
+.swiper-slide {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    overflow-x: hidden; /* Disable horizontal scrolling for each slide */
+}
+
+/* ... Your existing styles ... */
+/* Add this to your existing styles */
+
+input[type="submit"] {
+    background-color: #3f47dc; /* Bright yellow color, you can change this */
+    color: #e3e3e9; /* White text color */
+    padding: 10px; /* Add padding for a better look */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Add border-radius for rounded corners */
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #19a5c5; /* Lighter shade on hover */
+}
+
+footer {
+    margin-top: 20px;
+    background-color: #f8d9d9;
+    color: #640a5b;
+    padding: 20px 0; /* Add padding for better spacing */
+    text-align: center; /* Center the text */
+}
+
+
+/* Round corners for input and select elements */
+input,
+select,
+textarea {
+    border-radius: 5px; 
+    border-color: #640a5b;
+    border-style: hidden;/* Adjust the border-radius value to control the curvature */
+}
+
+/* Style the submit button */
+input[type="submit"] {
+    background-color: #3f47dc;
+    color: #e3e3e9;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Add a smooth transition effect on hover */
+}
+
+input[type="submit"]:hover {
+    background-color: #19a5c5;
+}
+
+/* Optional: Round corners for other elements */
+label {
+    border-radius: 5px;
+}
+.carousel {
+      max-width: 600px;
+      margin: 20px auto;
+    }
+
+    .carousel-item img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+
+/* Add more styles as needed */
+
+    </style>
+    <link rel="stylesheet" href="navigation.css">
+    <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+/>
+
+   <!-- Link to your CSS file -->
+
+</head>
+<body>
+    <div class="sb" id="menu">
+        <button id="menu-toggle">&#9776;</button>
+        <ul style="list-style: none;" id="menu-list" >
+            <li><a href="SignIn.html">Sign In/Create Account</a></li>
+            <li><a href="#">Badge Points</a></li>
+            <li><a href="#">My Bookings</a></li>
+            <li><a href="HelpCenter.html">Help Center</a></li>
+            <li><a href="AboutUs.html">About Us</a></li>
+            <li><a href="#">Review</a></li>
+    
+        </ul>
+       
+    </div>
+    <script src="navigation.js"></script>
+    <div class="box">
+    <header>
+    
+    <img src="Logo.jpg" alt="AdventureAvenueLogo" title="AdventureAvenues" height="150px" width="150px"><br>
+    <h1 >AdventureAvenue.com</h1>
+
+    </header>
+    <section id="main-slider" class="swiper-container">
+        <div class="swiper-wrapper">
+            
+    
+            <!-- Slide 2 (New slide with beautiful background) -->
+            <div class="swiper-slide" style="background-image: url('https://pix10.agoda.net/hotelImages/116/1162129/1162129_16012913160039490156.jpg?ca=6&ce=1&s=702x392');">
+                <div class="overlay"></div>
+                <div class="content">
+                    <h2>Welcome to AdventureAvenues</h2>
+                    <p>Discover a world of luxury and adventure.</p>
+                    <!-- Add more content as needed -->
+                </div>
+            </div>
+        </div>
+    
+        <!-- Add pagination and navigation if desired -->
+        <div class="swiper-pagination"></div>
+      
+    </section>
+    
+
+    <section class="booking">
+        <h2>Adventure Awaits</h2>
+<form id="dateForm" onsubmit="return validateDates()"> 
+<label for="checkin">Check-In Date:</label> 
+<input type="date" id="checkin" required><br> 
+<label for="checkout">Check-Out Date:</label>
+ <input type="date" id="checkout" required><br>
+<label for="guests">Guests:</label>
+<input type="number" id="guests" name="guests" min="1" max="6" required><br>
+</form>
+<form id="cityForm" action="city.php" method="post">
+    <label for="city">Select a city:</label>
+    <select id="city" name="city" >
+        <option vale=""diabled selected>Select a ciy</option>
+        <option value="Ahmednagar">Ahmednagar</option>
+        <option value="Akola">Akola</option>
+        <option value="Alibaug">Alibaug</option>
+        <option value="Amravati">Amravati</option>
+        <option value="Aurangabad">Aurangabad</option>
+        <option value="Chandrapur">Chandrapur</option>
+        <option value="Dhule">Dhule</option>
+        <option value="Jalgaon">Jalgaon</option>
+        <option value="Kolhapur">Kolhapur</option>
+        <option value="Latur">Latur</option>
+<option value="LonavalaKhandala">Lonavala and Khandala</option>
+<option value="Mahabaleshwar">Mahabaleshwar</option>
+        <option value="Mumbai">Mumbai</option>
+        <option value="Nagpur">Nagpur</option>
+        <option value="Nashik">Nashik</option>
+        <option value="Panvel">Panvel</option>
+        <option value="Pune">Pune</option>
+        <option value="Ratnagiri">Ratnagiri</option>
+        <option value="Satara">Satara</option>
+        <option value="Shirdi">Shirdi</option>
+        <option value="Solapur">Solapur</option>
+        <option value="Thane">Thane</option>
+
+        <!-- Add more city options here -->
+    </select>
+    <input type="submit" value="Submit">
+</form>
+
+<div>
+    <p>
+        <hr>
+       <h2>Facts To Know About Maharashtra Travel</h2> 
+       
+
+    <div id="carouselExampleIndicators" class="carousel slide" width="50px" height="400px">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="https://blog.weekendthrill.com/wp-content/uploads/2016/07/070416_0920_35ACTIVITIE9.jpg" class="d-block w-100" style="width:50px ;height:400px;">
+          </div>
+          <div class="carousel-item">
+            <img src="https://blog.weekendthrill.com/wp-content/uploads/2016/07/070416_0920_35ACTIVITIE17.jpg" class="d-block w-100" style="width:50px ;height:400px;"  >
+          </div>
+          <div class="carousel-item">
+            <img src="https://i.pinimg.com/736x/82/c7/1d/82c71d71b4c30469d41a64c708110a77.jpg" class="d-block w-100" style="width:50px ;height:400px;"  >
+          </div>
+          <div class="carousel-item">
+            <img src="https://wallpapercave.com/dwp1x/wp8122853.jpg" class="d-block w-100" style="width:50px ;height:400px;"  >
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+       Certainly! Maharashtra is a captivating state in India with a diverse range of attractions and cultural experiences that make it a compelling destination to visit. 
+<br> <br>
+<div style="background-color: #FFF2D8">
+       <b>Mumbai</b> <br> The City That Never Sleeps: Mumbai, the capital of Maharashtra, is a bustling metropolis known for its energy. It's home to Bollywood,iconic landmarks like the Gateway of India, and a vibrant nightlife.
+    </div>
+       <br>
+       <div style="background-color:#f3d1a8">
+       <b>Historical Marvels</b> <br> Maharashtra is dotted with historical gems, such as the UNESCO-listed Ajanta and Ellora Caves, where ancient rock-cut temples and intricate sculptures date back centuries.
+    </div>
+       <br>
+       <div style="background-color: #CDFAD5;">
+       <b>Delectable Cuisine</b> <br> Maharashtra boasts a mouthwatering cuisine with dishes like Vada Pav, Misal Pav, and Puran Poli. Don't miss the street food stalls and local Maharashtrian restaurants.
+    </div>
+       <br>
+       <div style="background-color: #FFC7EA;">
+       <b>Diverse Landscapes</b> <br> From the Sahyadri mountain range in the Western Ghats to serene Konkan beaches, Maharashtra offers diverse landscapes for trekking, adventure, and relaxation.
+    </div>
+       <br>
+       <div style="background-color: #CAEDFF;">
+       <b>Luxury Hotels</b> <br> Mumbai has some of the most luxurious hotels in India, like The Taj Mahal Palace and The Oberoi. These hotels offer world-class amenities and stunning views of the Arabian Sea.
+    </div>
+       <br>
+       <div style="background-color: #9EDDFF;">
+      <b>Art and Culture</b> <br> Maharashtra is a hub for art and culture, with numerous museums, galleries, and cultural festivals like Ganesh Chaturthi, Lavani dance performances, and Gudi Padwa celebrations.
+    </div>
+       <br>
+       <div style="background-color: #FFC8C8;">
+      <b>Lifestyle and Fashion</b> <br> Mumbai is also known as the fashion capital of India, with a thriving fashion industry, high-end shopping districts like Colaba Causeway, and trendy lifestyle choices.
+    </div>
+       <br>
+       <div style="background-color: #EBEF95;">
+       <b>Film and Entertainment</b> <br> Besides Bollywood, the state has a thriving theater scene with venues like Prithvi Theatre and the National Centre for the Performing Arts (NCPA).</div>
+       <br>
+       <div style="background-color: bisque;">
+       <b>Language and Literature</b> <br> Marathi, the official language, has a rich literary tradition with celebrated authors like Pu La Deshpande and Vijay Tendulkar.</div>
+       <br><div style="background-color: #F4EEEE;">
+       <b>Forts and Palaces</b> <br> Maharashtra is dotted with majestic forts and palaces like Raigad Fort, Shivneri Fort, and the beautiful Aga Khan Palace.</div>
+       <br>
+
+
+
+</div>
+    <p id="result"></p>
+<br>
+ <p id="error" style="color: red;"></p> 
+ 
+    
+    </section>
+
+ 
+
+
+
+
+
+    <footer>
+        <p>&copy; 2023 Hotel Name. All rights reserved.</p>
+        
+		<div class="container">
+  <div class="row">
+    <div class="col social-buttons">
+    <h3>Social Links</h3>
+    <div style="display: inline">
+    <a href="https://www.facebook.com/"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMwAAADACAMAAAB/Pny7AAAAZlBMVEU6VZ////8yUJ15irtMZKfJz+IrS5ueqs24wNguTZva3elnerLh5O/l6PJida5bb6vU2OYmR5lxgrUGOJPP1OUdQpf09fqMmMFGXqRRaKk/WaH5+vyCkb/u8PfAx96yutSosdCVocfEFN1hAAAC2ElEQVR4nO3aW4+qMBiFYadysMjBIoKKqPP//+Se2VeTzGAL5msXZL33JDwhbbXtZsMYY4wxxhhjjDHG2PpSX+nREhX6/VxTxhh1vlTlfrzyGvotXVLmFG3TXXzIsny8oqnwv405RmlTDP2HrQIeY8y2ae2QJWCS061wguBjVFIPzhRsjFLRfQIFGqOuXTvJAozRl4fbsF8ARpfNRAouRtfZZAsqRpfuEzI6Rp2nzMjgmNMsCybmOH3sw2JO6TwLIsbUU9cXXIy6zpiUUTHmOffD4GGSfT7XAoh5zLbAYd75MHAYM3daBsSoy8z1EhGT3GZPZXiY6xvDHw2jqtkLJiCmnvivHxrTvWP5GKAwzkOmL7LDr7L7BQijzgcnSpZu99VfIZ0CqMjln3/bRSrR6q9CA36mKgdLEWG99FjaAZNtdOjXdEuVVstQLcTytcxYMd1SLBu1tVkapMn3dXZMakK/o3NWTHtbESbfL2bI2DELGjJ2TBwREyRiUCMGNWJQIwY1YlAjBjViUCMGNWJQWyJGJyMZ2/ZsfDVjz37nX6qiLh3Ldic7f44++l3pXaPfuVDyus77fqcq3zoef1G/TdaDGWrvm7dymMz/mJHDxP53ouUwO/8n53KYZ4B1RgyT+j+8EcP0/pcZOcxw877MyGFy/8uMHOYQ4IKWGCY+rwhz904RxDwDHKtLYfoQtzekMG2AZUYMU9T+lxkxTB7iJpoU5hBi50YK04TYhZLC3E/rwfTPFWHazxD36oQwQ5BLgkKYIsglQSFMHuA3sxgmCzH+pTDNcUWYXZAvo0uRU4Agy8xGXdLdWLHljYv72JOPALsZ/zUSJ2ca7nxwiWeaoxGDGjGoEYMaMagRgxoxqBGDGjGoEYMaMagRgxoxqBGDGjGoEYMaMagRgxoxqBGDGjGoEYMaMagRgxoxqBGDGjGoEYMaMagRgxoxqBGDGjGoEYMaMagRM6V/NCJFU+0koOUAAAAASUVORK5CYII=" width="30" height="30"></a>
+    </div>
+    &nbsp;
+    <div style="display: inline">
+    <a href="https://www.instagram.com/"><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBw8PDxAPDQ8QDQ4QEA8PEBAPDxAQDg8QFRUWFxUVFhgYHSggGBolGxYVITEhJSkrLy4uFx8zODMsOCg5LisBCgoKDg0OGhAQGi0lICIvLTIrKy0tKy0rNystLS0rLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS8tLS0tLf/AABEIAOEA4QMBIgACEQEDEQH/xAAcAAABBAMBAAAAAAAAAAAAAAAAAQIGBwMEBQj/xABLEAABAwIACQcFCwwCAwEAAAABAAIDBBEFBgcSITFBUWETIjJxgZGhFJKxwdIjNEJSU2JydLKz0RYXJDNUY4KToqPC8MPiQ4PhRP/EABsBAAEFAQEAAAAAAAAAAAAAAAYBAgMEBQAH/8QAQBEAAQIDAgoGBwcEAwAAAAAAAQACAwQRBTESIUFRYXGRobHRBhMyUoHBFBUiI0KC8DRDU6Ky0uEzNWKSJHLx/9oADAMBAAIRAxEAPwC8UIWnhGvip4nzTvDI2C5cfADeTqAGtKASaC9dfiC2ibaToChmH8otHTEshJrJRotGQIgeL9R/hBUBxxx4nri6OLOgpb2EYdZ8g3yEa/o6hxtdRIhFMjYDaYcycfdHmfIbVoQpLK/Zz5KY4RylYRmJETo6ZtzYRM5xGy7n37xZcKbGKuk6dVUP4GeW3dey5YCUBb0OVgQhRjAPAcb1ehwGC5o2LK6V50uc5x3lxJTbneUgCcAnmgVxrCgJwQAnAKMlWGsQE4IATgFGSrDWoCUBACcAoyVYaxACUBKAnAKMlWGsQAgBKAnAKMlTtagBOud6RCYpUoed57ysrKyUapHjqc4LChJQG8JCAulFjBWNFm1MzRwmfb0rrUGPtdF03CYfFkbnHvBB8VFkKJ8CC4Uc0bFBEk4EQUexp8BxvVrYHx+pprNqB5M86ATzoievWO0W4qXQyte0OY4Oa4XDmkFpG8Ea157Xdxcxpno3DTykJPOjcSW20aRuPEdt1lzFmNpWFi0ZNvPasCe6OscC6WND3Td4E4x44tSuxC5+CcJxVcQlhN2nQWnQ9jtrXDYV0FjEEGhQk9jmOLXChF4QhCEiamk20nQFSGUDGk1s/JxOPksTi1gGqR2kGQ+rcN1yp/lNwyaejMTDaWpJj0axHbnnt0N/iVLomsKTAHpDr7m+Z8tq17OlqjrT4eZ8tqx2S2T7Jc1EmGtUQkwNSgJ4CUNTC9SiEmgJwCcGrJFA9xAYxz3HUGguJ6gEwuU7YaxgJQFIKXEzCMnRpXtHzwIvtkLpRZOa89IRN4Okbo7gVTfOwG3vG0JpmJdnaiN2hQ8BKAp0MmVX8tTj+OT2E4ZMqr5aDz5PYUJtGW74TxPyg+8G/koKAlAU6GTKq+Wg86X2U4ZM6n5aHzpPZURtCX7438lK20ZL8Ub+SgoCcAp1+bSo+Vg8+T2Ufm1qfloPOk9lMNoS/fG/kphaciPvRv5KDoU3OTaq+Vg8+T2E05Nar5aDz5PYSenS/fG/kn+tZL8Vu/koUkUvlyeVo6Jid1SfiAufVYmYQjFzTucPmOEh7m3KcJuC6542hSMtCVfibFbtC4CFmq6OSJxbLG9pHwXMcHdxWBSYauDHjQhCRNLkqVCRCbhLl28VMPPopmuF3RuIZIze38doP4q6aedkjGyRuDmPaHNcNRaRcFee1ZuS/C5fE+leSXR3kZfYwkXb2Eg/xFZdoQsJvWC8X/X1i1Ia6QyAfC9JYMbb9Iu3cNQU+QhCyEGKmMqNaZa8x6c2CNkY06M7S5x6+db+FQ+y7GM8mfW1LhpDp5SOrPcB4WXMsjuWAhwWMGQDgjaWgYEFrRmHBY81LmrJZFlLhKyIKbZZKenc9wZGHFzjZrWgucTuAGtPp6d0jmsY0uc5wa1o1lxNgArkxPxWjoWBzwHVDhznaDmX1tafSdqozs8yWZU4ybh9ZOKqzs1DlGVdjJuHPQo/i7k5FmvwgTfXyLHAgcHOGzXob3qdUGDYKcWp4o4htzGgE9Z1ntW8sU0jWAue4NaNJc4gNA4koWmJuNMH3hxZsmxCcxORpg+2fDJsWVCjtfjlQw3Bm5Vw+DEM/udoae9cybKNS/Aimd9LMb6CUjZSO7GGFSw7MnIgq2EaaqcVNUKAOymRD/8AM89cjR6kw5T2/sbv5w9lSiz5k/DvbzVgWHPn7v8AM3mrCQq9/Oc39kd/OHsI/Oc39kd/OHsJfV0z3d45pfUU/wDh/mZ+5WEhV5+c9v7G7+cPYR+c9v7I7+cPYSerpnu7xzXeop/8P8zP3Kw0KvfznN/ZHD/3N9lOblNi20rx1SNPqSGQmB8O8c0hsOfH3f5m81YCFB4cpNL8KKUfRMbvSQuhR484PlsDI6EnRaRlvFtwFE6VjC9pUL7KnWCphO8BXhVSCqpY5Rmyxslb8V7Q8eKhmHsn0MgL6Q8k/SeTeSYz1HW3xHUppBUMkaHxvbI06nMcHNPaFnTIcZ8M1aacNlyhlpyYlXe7cRnGTxBxLz5X0MsD3RzMdG8aw4HvG8cRoWurxxjwBFWxZjwGyNB5OSwu07j83eFS+FKCSmlfFK3Ne02tsO4jeCNK2ZeaEYZijqy7UZOspc8XjzGjhsJ1UJqFNhLWonLt4mVphrqd17Bz2xu3Zrzmuv1Xv2LhJ8LiHNOohwIPFMfRzS05UyLCEVhhm5wI2ii9FoXF/KCPd4hCH6FeX+iRsypGtOdI928uPeSsFlmkHO7T6UlkcB1AvRmQaABMsiyyWWSniLnsaBclwaBvJNgEmEpBDGVWDkxwDmg1sjecS5kV9YGgOcPs+crEWngyjbBBFC3VGxrL6rkDSesm57VnlkDGlzjmtaC5xOoAaSUHzMcx4pefDVkXnM9NGZjuiZMmq4fWeq5eMWHYqKLPk5z3XEcYIu4+po2lVJhvGGorH3lkdmXu1jCWsb9Ft/E6eKMZsLvrKl8jiQ2+Yxp+CxpOa31nrK5a35KSbAaHOHtcNA+q1RnZdlMlGBzhV5vObQOeXUg96EIV5bCEIQuXIQhIkJXIQhImOclQkQhROclQhdvFTF99fLmjmxsAdI+180HUBvJ09x3Ky6fEjB7G5pg5Q2sXPe/OPmkAdgCpR5tkM0OM6FlztsS0o/AfUuzDJrqQqmwXhielcHwyOYRa4B5rhrsdhHWrYxTxnjro7Osydou5g6Lh8Zl9nDZ4qIY54mNpmGopS4xAgSMdpdHe9iCBpbqG8cdkQwXWvp5WTRHMex7XA+kHgRcHgVBEbDmW4Tb8/kVXmJaWtaX6yH2shuNcztH/AKMtfQiheUbAYnpzUMbeWAXNtbohckHRsJv1Zyk+C65tRDHOzoyMD7aDmna3rBuOxbMkYcC1wBa4EEHUQdYWWxxY7CGRBkvHfKRw8XtOMbiPEVXnQhC38PUHk1TLDp9ze9oJ1kZ2g9ug9q562A8HGF6gxwe0ObccY1FKlGxNShdhJ6knlfFC52chVaLL6kLUdrPWUiS6REBeFfSru4j0/K4Qpxsa/P8A5YLh9lcBS/JfHeuv8WOV3VqH+SrTMWkJx0FVJ9+BKxHZmu4K3FHMeq7kaCYg2dJaIfxdIeaHKRqE5U5bUkbd82d5rHD/ACQ7LAGK2ucICsuGIk5Cabqjdj8lVl0JqVEvWr0lKhIhd1q5KgLbwTguWqkEcDXPcd3RaNridgVnYv4jU8AD6gColvezrGFp4D4W3X3BQxp1kIY78yz5604EmPeGpNzRf/A+hVVnQ4IqJzaCF8ljYlrHOaDxI0DtXahxDwg7SYmM+lIwHwJVvRxhoDWgNA0AAWAHALIs59qxD2WgbTyQ3F6SxifdsaBpqT5Dcqelyf4QAuGMdwbI0HxIXHwhgCrg0zQSMaNGdmOLb9Y0eKvlCY204vxAHaOaSH0ljg+2xpGioO2pG5edSCNehNVzYbxNpKoEtaKeTY+JoDb/ADm6j2WPFVdh7AE9E/Mlac09F7c4scOB38NauwptkXEMRzIjkbWl5zEzE7um/wAM/HQp/kqzPJZbW5Tlhn77ZgzfHOU4VFYr4wPoZc9ozoyM2RhNgW9ewjYVZcOPeDnNznSuidboPjdnf03His2agP6wuAqChy2bLmTMuiw2lwdmFSNBHDIuzh4t8jqc7o+TzX6sw+KoN+s9ZUzxyx1FUzyema5kJIL3OsHSW0gWB0N1HedGpQpTS0Mw2kuyrcsCSiy0B3Wihca0zfyVbWS2tD6SSIm7opdW5jwCB3h6mqrPJHNz6lnxmxv80kf5KzFTjikQoWtyGGT0QDLQ7QCd9VUWVOmDK0PH/khjeesZzPQwKFqwsrsdn0z97Xs803/yVeq1Bd7sI0sd+HIwnaKbCR5JUBIhPwlprd5RIsaEzCCr4KRIhItJ0RPSqbZJ/fcv1d/24lB7qcZJh+lS/V3fbjVOaiVhOH1eFRtXFJRf+qtVV/lbf7lTDe+U9zW/irAVdZXjzaQfOmP3az5c0iAoLsIVn4fzfpKrhCahafWr0Sict3A+DpKqZkMQznOdY/FaNpO4ALQVu5OsBiCmE7xaWcXG9sRtYdvS7kyLMYDai9Z1pzwk4BiZTiaNPIX7sq7eAsDQ0UIjiFybF7yAHyO3nhuGxdZCimOONLaJvJx2fUvFwDpbG34zuO4f6cvG86SgCHDjzkfBHtOd9VOhd6vwjDA3OnlZE3ZnGxd1DWexRufKHQsNm8tL84NYG+LgfBVXW18s7zJNI6RztZcb9g3DgFrK42WZT2jVFcv0agNb75xcdGIczrxalbkWUahdoLZ2naQ2Mgdzr+CkGDsM01SL08zJCRfNvZ462nSO5UGslPUPjcHxucxzTnAtJaWneCNS50swj2TRPmOjUs5vuiWnaNl+9eilpYSwfFUxOimaHsd1XadjmnYRfWoniPjl5TamqiBOB7nJoAl1c125/p69c5VNzSw0N6EpmWjScbBficMYI3EH6zKicZsCPoZ3Rv5zDzo32sHN02PA7CFxld+OWBRWUr2gXmZd8RtpzgNLf4ho67HYqRe2xIOxacCP1jcd4R3Y9oemQMJ3abid5Hx4gpEiEJ5K1lO8kbv0mYb4HHuez8VaqqfJH77l+rP+8jVsLMjmsQ/WRAHSIf8ANOpvBVxlgHNpDxnH2FWiszLD0KT6c3oYqzUsM+wEVWD/AG+H836nIQkQnYS2FsITLoTcJRUQhIhTOipUqnWSX31L9Xd9tiginWSX33N9Xd94xV4sSrSFnWv9hi6vMK1VXOWDo0fXP6I1YyrnLD0aTrqP+NQNdgmqDbB+3w/m/S5VshIhSdcvRFv4EojUVMMNz7pIxpI1hpdYnsFyr9jjDQGtFmtAAA1ADUFTeTWHOwlET8Bkru3NP4q6Exz8JBPSeITHZDyBtfEnkAtLCla2nglmdqjY5+7OI1N7TYdqobCNa+eV8shz3vc51zvOwbgNQG4K1cqFQWUOaPhzMa76Ia93pa1VAnQ34NVodGZZrYDoxvcaeA5ngEqEiFMIqJkt0JEJ4iLk+KQtLXNJaQQQQbEW1EHYVeeKmFfK6SOY2z+hKBskbr79B7VRKsvJHUnMqYjqa5j2jrBDvQ1MjGrdSwOkUs2JKdZlYRsJAI4HwViqjsesH8hXStAsxzuVbosLP5xA4C5HYrxVV5XI/wBIhfvhDe57vxUcB1H61hdG4pbNlnead2PyKgaRKkVzCR6p1kk99y/Vn/eRq11VGST33L9Wf9uNWuqEX+ofrIgDpJ9t+UKussPQpPpzehirFWdlg/V0v0pvQ1VgU9h9lFNgf2+H836nIQhC4rYT0Jt0JUlE9CEKq6MmoU6ySe+5vq7vvGKDBqnWSVtqqb6u/wC8Yoetq4BZ1r/YourzCtVVxlh6NJ11H/GrHVd5XW3bSf8Av/41LFdgtqguwft8P5v0uVZoWbMRmKj169EwgpJkzlzcIxt+MyYDzCfUVcyoTF+q8nq4JnaAyVpdbXm3s/wJV9K1LxA8FBPSaHSOyJkLaeIPIhQzKnHehabdGdhPAFrx6bKo1f8Ah3B4qaaaA290YQ2+oP1sPY4AqhqmmdG9zHtLXMc5rgRYtINiO9dFdgO1rT6NTLXSxhZWncbt9QsKEuakXCKiVCEIUzYi5IrJyQwm1U+2j3JoO8nOJ9A71XAaSQBtV34lYKNJRxxuGbI/3WQbnOA5vY0NHWCn4dRRYPSKO2HJlhveQB4EE8BtUgVWZXXg1FO3aIc7vc4eoq01SeUOv5avlsebFaFvAs0O/qzkrO0h/o3CLpzDyNaTtxeajSEIVkFHynOSP33L9Wf95GrYVT5I/fcv1Z/3kathVonbKAOkn235Qq6ywfq6X6U3oaqxVnZYP1dL9Kb0NVZKaGKtRTYH9vh/N+pyahOQnYK2ElkJ9kJcFNqnBieGLKGJ4Yhp8dQl6xBim+SsWqpfq7vtxqIBimeTBtquXjTvP9caZAjYUVo081m2o6snFH+Ks1QDKu27aXrn/wCNT9QXKhHdlMdz5B3hv4LSnjSA46uIQdYppOsP/b9JVcZiMxbGYlzEP9ejzDWsGK2sRcLeUUjGON5YAIzc6SwdF3cLdbSqtzFvYEwk+jnbLHpA0Pbewew62n/dYCnlpzq31N2VZ9pyvpcAsHaGNuvN4jfQ5FdahGPOKXlP6TTNHlAHPZq5UAaCPn20cR1KVYOr46mNssLs5ju9p2tcNhC3UQOa2I3QUEy8xGk42G3E4YiDvBXniWEglrgWuBsQ4FpB3EHSCsZYrzwvi/S1YvPEOUtYSs5ko7do4G4UXrMmrCbw1LmjdJG157wR6FRdAitPs40YS3SKViN95Vp1EjwI5BViWpA0nULqy4cmYveSqNtzIbHvLvUpLgfFOjpCHRx58g1SS2e8HXcbGm+0AKaGyIbxTZ5KSP0ik4basJecwBG0kDcCoriHiY5pZVVjLWs6KJw5xdfQ942W2DtPGyULXqqhkTHSSuDGMBLnHQAFbAoEGzk5FnIuG/UAMmgfVSVzsaMLNo6WSbRn2LYh8aUg5vYNJPAFUTI8lziSSSSSSbkk6yV3sc8Y3V8xzLtgju2Nhve19LnbM4+At28BcHo4sSzjJwPb7bsZ0Zh4Y66SUiEqRTNctlTnJH77l+rP+3GrYVU5I2/pUp3U7h3vj/BWso3dorz/AKRn/mnU3gq6yw9Ck+nN6GKslZeWE82kHGY/dqtVag9lFNg4rPh/N+pyRCVCmDVrp9kqehdgqOq22sWQMTw1ZA1efPi1KpucmBqlGTt1q36UUjfsn1KOBq7eKMnJ1sBOovLPPa5o8SE6ViUjsOkcVSnfal4jf8TwVrqH5R2Xp4XbpiO9hPqUwUfx2puUonkC5jcyQcdOafBxRLOtLpd4GZBlmvDJuGTnptxKrc1LmLOGJwjQfho5L1rcml5NbQjTuTTcNN6xZMDYUmpH50R5ptnsN8x44jfxViYHxjp6oAB3Jy7Y3mxJ+afhengq25NLmK7K2lEgYhjbmPkcn1iWfOSMGaxuxOzi/wAc/HTRXIhVbRYcq4dDJnFoHRfZ7eoZ2rsXUZjvUDXFCeIDx/kVsw7Yl3dqo8OSwolixx2SD40481PkKASY81FtEUIPHPd/kFyMIYz10t/duSafgw8wjtHO8U91rS/w1PhzonQ7EmHH2iANdeCnuGcYKajaeWfz7aImEGU9mwcTYKqsasZ5642PucDTdsbSS36Tj8J1uwbOOtKy5JOknSTtJ3rWfEoPTzEOYZkSWbZcCUOH2n5zk1DJrxnSueQkWxJEsDm2VuHFqt4GqEiEqtscnKwMkMXutS7dG1ve4H1K0FA8lFHmU00un3WUM7GNGkdr3dynifWq85t2IHz8SmSg2AV3qssrr+fSt3NkPebepV4pnlWqA+ta0HTHDG0jc4lzvQ5qhatweyjOxmlkjCBzV2klKgJEqttC0lnshZM1C5V6rphqyBqyFliUoavMXmhoqBckDVkp3FjmvbocxzXN6wbj0JQ1ODVFhUuUZdkVuU87ZGMkb0Xta8dRF0s0LZGOY8Xa9pa4bwRYqNYkYQzmGneecy7mcWE6R2H08FK0bS0ZseEHjLfryhAszAMCM5mY4tWQqpq+hdDK+J+tptfY4bHDrCxBisbDuB21TbizZWjmO2W+K7goPU0b4nFkrSwjYdvEHaEJWhJvln1+A3HyOnjtoTSc+Jhn+QvHmNHDjphidmLMGJ+Ys3DVrDWtyaTMW1mIzF2Euw1qGNMMa3CxNLEuGlw1pujWJ0a3ixY3MTw9SNiLnvjWB8S6TmLC+NWYcUhTtiLlSRLVliXWkjWtJGtOBHVuHEXJcyyfSUzpZGxsaXOc5rQBrcToAW4yifI4MjY57ibNDQXEnqCs7EvFBtGBNOA6pcLACxbC06wDbSTtPYN52Zd5fcop+04cpCwndo9kZzyznYpDgLB4paaGBtvc2AOI1F50vPa4krfJtpOgJyieUHDQpqRzGm004Mbba2sPSd3aOs8FdXn8GFEm44YMbnm/XjJOrGSquxmwh5TVzzDS1z3Zt9BzBzWeAC5iUlIrcO5eosY1jQ1twAA1DElShIlGtW2Jy6HJoW55OhJVZvWBdfC0ObUTN+LLIO5xWBrV28b6Tk6t52SASDtFj4grkNavMptpZGe05zxWdCi4cJrs4HAJoasgantasjWqoXJS5LSSOje2SM5r2m4P+7FYWCMKMqGXHNeOmzaDvG8KAtas9LK+NwfG4scNRH+6QrkhaTpV5rjabx5jTxWbOyrZhuYi4+R0cFZKwVFMyQZsjWvG4i9vwXIwbh9j7Nl9zfv/APGfw/3Su2xwIBBBB1EaQUXwJiFMtrDIIy/yChyJCiQXe0KH6uK4lRixA7Sxz4+3OHjp8VqOxUOyYHrjI9alKFXfZUm81MMDVUbgQFM2fmG/HtoeIKihxWk2SR9zk04rS/Hj/q/BS1Ci9SSfdP8Aseak9ZTGcbFEPyWm+PH3u9lIcVZvjx97/ZUwQk9SSfdP+x5pfWcfRsUNOKk3x4+9/sppxSm+Uj73+ypohL6llO6f9jzS+tJjONihJxOm+Uj73+ymnEqU65Y/6j6lOEJwseUHwn/Y80vraZzjYFB24iOPTqGjqYXesLZpsQ6caZZJJOAzWN9Z8VL0KZlnSzLm7STxKQ2tOEUw6agB5LQoMFwU4tTxMjuNJA57utx0ntK300m2k6Ao1hzHGmpwREfKJdgjN4wfnP1dguepWXPZCbjxD6yKtChR5qJRoLnG/wDkniV1MNYXio4jLMdGnNaDznu2NaP9sqSw9heWsmfPKdehguc1jB0QOHpJJ2rYw7hWerldJO7O2NaNDGN3NGweJ23XJc1MZGDijmyLKZJtw3GrzecgGYeZy6k1CELQhlbaVZIm3cBxCxhdjFOi5etgjtnAyNc8fMac53g0q411BXMo4kQQ2l5uAJ2Y1aP5Lt+b5qFJkLKwnLzL0+PnUaxyoOUibK0XdEdP0Dr7jbxULa1WrIwOBa4XBBBB1EHWFAMM4LNNKRpMbrmN3DceIQ1bkqQevbdc7yPlsWpZU1VnUuvF2q8jwvXOa1ZWtQ1qytahpzlqOcka1ZA1Oa1PDVEXKEuTQ1Z6eeSPTG8s7SAesbUgalzU0PLSHA0OcYio3GooV0YsPTt6WbJ1t/Cy2G4wv+TYeon1rj2RZXmWvONFBFPjQ8QSqxloJ+EcOC7YxjPyP9f/AMTvyk/c/wBz/quFZFk/13PfiflZ+1N9Egd3eea7v5Sfuf7n/wAR+Uf7n+4PwXCsiyX15PfiflZ+1J6JA7u8813Pyk/c/wBwfgkOM37n+5/1XDLU0tS+vJ78T8reScJOX7u8812zjR+4/uf9Ux2Nf7j+5/1XDc1YnNThbM6fvNzf2qRslL9ze7muy/G2TZCztLitGoxsqj0RHHxDCT/USuc9q15GqT1rNOviHcOACsQ5OXHwDjxWLCOEqib9bK9415pPM80aPBcmZi6MrVqStUkOMXGrjU6VrwSGigxDNkXLlYtV7V0ZmrTe1bctEWjDctRwSLI8Ji3ILqhWAhWTkswQQJKt4/dR3HUXOHgL8XKE4vYHkrJ2xRiwJBe61wxg6RP+6SQFeOD6JlPEyGIZrI2hrRt6zxOs9asRYlG4Iyob6RT4hwfR29p1+hv88KrbQhCqIIQtWupGTsMcguDpBGtp2EcVtISOaHAg3FKCWmovUCwhgySndYjOYToeNR/A8FrNarCljDgWuAc06wdIK4lZi806YXZnzXXLew6x4oVnrCeDhS+Md0nH4E4iNZ2rZgWkCKRMRz5PrdqUfa1PDVtS4MmZ0ozbeNI8FizbaDoQ3HhRIJ940t1gjirYiB2NprqTA1LZPAS2VfCqm1WOyLLJZJZdVdVMsksnWQlqlSWS2SoC5cm2TSFlSELgVwKwOCwvC2XBYXBSNKkaVrvC15GraeFgeFM0qy0rSkatSVq35AtSUK7CcrkMrnzNWlK1dGVhOgC58Vmp8XKyboU8h4ubybfOfYLblXYV3NXREEMVeQBpIHFR94W5gTAc9ZKI4WE2tnPNwxgO0nZ1aypzgjJ1pDq2TR8nDpHU5xHoHapxQ0MUDBHAxsbBqa0W07zvPEoggYTRjWXPdIYMJuDL+07P8I58NK0MXcAw0UIjjGc82MkhAznutw1NGwbOvSu0hCkqgyLFfFeXvNSbyhCELkxCEIXLkIQhcuQtet6J6kIUn3bk5naCjlfrHUtNKhAVof1Ct6F2QkQUIWQ+9SJEhQhMK5CUIQmFcnBIUqEiRYXLG5CFK1TNWB613oQrMNTsWtIs+Cv1gQhbMj2wponYOpTzAXQHWfQuqhCL29kIPmf6pQhCEqhQhCFy5CEIXLl//9k=" width="30" height="30">
+    
+    
+    
+    </div>
+    
+    </div>
+  </div>
+</div>
+		
+	
+    </footer>
+
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
+</script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+<script>
+    var swiper = new Swiper('#main-slider', {
+        slidesPerView: 1,
+        allowTouchMove: false, // Disable touch navigation
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
+
+
+function validateDates() {
+    var checkinDate = new Date(document.getElementById("checkin").value);
+    var checkoutDate = new Date(document.getElementById("checkout").value);
+
+    // Set hours to 00:00:00 to compare only the dates
+    checkinDate.setHours(0, 0, 0, 0);
+    checkoutDate.setHours(0, 0, 0, 0);
+
+    if (checkoutDate <= checkinDate) {
+        window.alert("Check-out date must be after the check-in date.");
+        return false;
+    } else {
+        // Clear any previous error message
+        document.getElementById("error").innerText = "";
+        return true;
+    }
+}
+
+
+
+
+
+
+function formatDate(dateString) {
+    // Convert MM/DD/YYYY to YYYY-MM-DD
+    var parts = dateString.split("/");
+    return parts[2] + "-" + parts[0] + "-" + parts[1];
+}
+
+document.getElementById("cityForm").addEventListener("submit", function (event) {
+    event.preventDefault(); // Prevent the default form submission
+
+    const selectedCity = document.getElementById("city").value;
+
+    if (selectedCity) {
+        // Redirect to the page related to the selected city
+        window.location.href = selectedCity + ".html";
+    } else {
+        // Display an error message if no city is selected
+        alert("Please select a city before submitting.");
+    }
+});
+
+</script>
+
+
+</body>
+</html>

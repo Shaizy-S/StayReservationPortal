@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Hotels</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    /* Reset CSS */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Global styles */
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to left, #a1f3f2, #9089b5);
+      font-size: 16px;
+    }
+    .filter {
+      background-color: #fff;
+      border: 2px solid black;
+      padding: 10px;
+      margin-bottom: 20px;
+    }
+
+    /* Style for the label and select elements within the filter container */
+    .filter label {
+      font-weight: bold;
+    }
+
+    .filter select {
+      width: 100px;
+      padding: 5px;
+    }
+
+    /* Style for the Apply Filters button */
+    .filter button {
+      background-color: #244572;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+
+    .filter button:hover {
+      background-color: #44b4d5;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    /* Heading styles */
+    .heading {
+      font-size: 2rem;
+      text-align: center;
+      margin-bottom: 30px;
+      color: #004080;
+    }
+
+    /* Hotel styles */
+    .hotel {
+      display: flex;
+      align-items: center;
+      margin-bottom: 30px;
+      border: 2px solid black;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    }
+    .hn {
+      font-size: 1.5rem;
+      text-decoration: none !important;
+      color: #333;
+    }
+
+    .hotel img {
+      width: 350px;
+      height: auto;
+      margin-right: 20px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .hotel-description {
+      flex: 1;
+    }
+
+    /* Hotel name styles */
+   
+
+    /* Location styles */
+    .location {
+      font-size: 1rem;
+      color: #666;
+      margin-top: 10px;
+    }
+
+    /* Description styles */
+    .description {
+      font-size: 1rem;
+      color: #333;
+      margin-top: 10px;
+    }
+
+    /* View details button styles */
+    .view-details-button {
+      background-color: #244572;
+      border: none;
+      padding: 10px 20px;
+      margin-top: 10px;
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      text-transform: uppercase;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+    .view-details-link {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+    .view-details-button:hover {
+      background-color: #44b4d5;
+    }
+  </style>
+</head>
+<body>
+  
+
+  <div class="container">
+    <h1 class="heading">Hotels in Kolhapur</h1>
+    <div class="filter">
+      <h2>Price Range Filter</h2>
+      <label for="priceRange">Select Price Range:</label>
+      <select id="priceRange">
+        <option value="all">All</option>
+        <option value="2000-3000">2000 - 3000</option>
+        <option value="3000-6000">3000 - 6000</option>
+
+      </select>
+      <button id="filterButton">Apply Filters</button>
+    </div>
+
+    <div class="hotel" data-price="2794">
+      <img src="https://pix8.agoda.net/hotelImages/28689877/-1/42e94a98eca21ceba1df8cb3a1e506f0.png?ca=25&ce=0&s=1024x768" alt="Hotel 1">
+      <div class="hotel-description">
+        <h1 class="hotel-name"><a href="Blooming Soul.html" class="hn">Hotel Blooming Soul
+        </a></h1>
+        <p class="location">Manohar Srushti Building, Phulewadi 1st Bus Stop, Phulewadi, Kolhapur, Kolhapur, India, 416010</p>
+        <p class="description">&#8377; 2794 1 room per night<br>Set in Kolhapur, 1 km from Rankala Lake, Hotel Blooming Soul features views of the city. This 3-star hotel offers room service, a 24-hour front desk and free WiFi. There is a restaurant serving Chinese cuisine, and free private parking is available.</p>
+        <button class="view-details-button"><a href="Blooming Soul.html" class="view-details-link">View Details</a></button>
+      </div>
+    </div>
+
+    <div class="hotel" data-price="1612">
+      <img src="https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/491416549.jpg?k=d43495a3bb7e56cf2ca960ce1703bb471af5cda926a207abb09df40ecb500a63&o=" alt="Hotel 2">
+      <div class="hotel-description">
+        <h1 class="hotel-name"><a href="woodland.html" class="hn">Hotel Woodland Kolhapur 3 Star Hotel </a></h1>
+        <p class="location">204,E Ward Tarabai Park, Kolhapur, Kolhapur, India, 416001  </p>
+        <p class="description">&#8377; 1612 1 room per night<br>The car parking and the Wi-Fi are always free, so you can stay in touch and come and go as you please. Conveniently situated in the Kolhapur part of Kolhapur, this property puts you close to attractions and interesting dining options. Don't leave before paying a visit to the famous Kolhapur Airport. This 3-star property features restaurant to make your stay more indulgent and memorable.</p>
+        <button class="view-details-button"><a href="woodland.html" class="view-details-link">View Details</a></button>
+      </div>
+    </div>
+
+    <div class="hotel" data-price="5354">
+      <img src="https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/470968309.jpg?k=6786a51b4f0f0e5002aa7987d8d4ad77244736c4ccda3ec8123ca57f881bf9d7&o=" alt="Hotel 3">
+      <div class="hotel-description">
+        <h1 class="hotel-name"><a href="regenta.html" class="hn">Regenta Place Raysons Kolhapur</a></h1>
+        <p class="location"> 204 E ward, New Shahupuri, Kolhapur, India, 416001 </p>
+        <p class="description">&#8377; 5354 1 room per night<br>Set in Kolhapur, 1 km from Rankala Lake, Hotel Blooming Soul features views of the city. This 3-star hotel offers room service, a 24-hour front desk and free WiFi. There is a restaurant serving Chinese cuisine, and free private parking is available.</p>
+        <button class="view-details-button"><a href="regenta.html" class="view-details-link">View Details</a></button>
+      </div>
+    </div>
+
+    <div class="hotel" data-price="5107">
+      <img src="https://pix8.agoda.net/hotelImages/110/11098391/11098391_20010911390086907604.jpg?ca=9&ce=1&s=512x384" alt="Hotel 4">
+      <div class="hotel-description">
+        <h1 class="hotel-name"><a href="veeksar the fern.html" class="hn">Veeksar The Fern</a></h1>
+        <p class="location"> C.S. No 462 B/23, E- Ward, Opp shahu Market Yard Kolhapur – Maharashtra, India, 416003 Kolhapur, India,</p>
+        <p class="description">&#8377; 5107 1 room per night<br> Conveniently situated in the Ruikar Colony part of Kolhapur, this property puts you close to attractions and interesting dining options. Don't leave before paying a visit to the famous Kolhapur Airport. Rated with 5 stars, this high-quality property provides guests with access to massage, restaurant and fitness center on-site.</p>
+        <button class="view-details-button"><a href="veeksar the fern.html" class="view-details-link">View Details</a></button>
+      </div>
+    </div>
+  </div>
+  <script>
+    const priceRangeSelect = document.getElementById('priceRange');
+    const filterButton = document.getElementById('filterButton');
+    const hotels = document.querySelectorAll('.hotel');
+  
+    filterButton.addEventListener('click', applyFilters);
+  
+    function applyFilters() {
+      const selectedPriceRange = priceRangeSelect.value;
+  
+      hotels.forEach((hotel) => {
+        const price = parseInt(hotel.getAttribute('data-price'));
+  
+        if (selectedPriceRange === 'all' || (price >= parseInt(selectedPriceRange.split('-')[0]) && price <= parseInt(selectedPriceRange.split('-')[1]))) {
+          hotel.style.display = 'flex';
+        } else {
+          hotel.style.display = 'none';
+        }
+      });
+    }
+  </script>
+</body>
+</html>

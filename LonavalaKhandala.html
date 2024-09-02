@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="file:///D:/VSCode/Logo.jpg" type="image/png">
+  <link rel="shortcut icon" href="file:///D:/VSCode/Logo.jpg" type="image/png">
+  <style>
+    
+    /* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Global styles */
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to left, #ffcccc, #d4ebf2);
+  font-size: 16px;
+}
+.filter {
+      background-color: #fff;
+      border: 2px solid black;
+      padding: 10px;
+      margin-bottom: 20px;
+    }
+
+    /* Style for the label and select elements within the filter container */
+    .filter label {
+      font-weight: bold;
+    }
+
+    .filter select {
+      width: 100px;
+      padding: 5px;
+    }
+
+    /* Style for the Apply Filters button */
+    .filter button {
+      background-color: #244572;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+
+    .filter button:hover {
+      background-color: #44b4d5;
+    }
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Heading styles */
+.heading {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Hotel styles */
+.hotel {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  border: 2px solid black;
+  padding: 20px;
+  background-color: #fff;
+}
+
+.hotel img {
+  width: 300px;
+  height: auto;
+  margin-right: 20px;
+  object-fit: cover;
+}
+
+.hotel-description {
+  flex: 1;
+}
+
+/* Hotel name styles */
+.hotel-name {
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: #333;
+}
+
+/* Location styles */
+.location {
+  font-size: 1rem;
+  color: #666;
+  margin-top: 10px;
+}
+
+/* Description styles */
+.description {
+  font-size: 1rem;
+  color: #333;
+  margin-top: 10px;
+}
+
+/* View details button styles */
+.view-details-button {
+  background-color: #244572;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 10px;
+}
+
+.view-details-link {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+/* View details button styles */
+.view-details-button {
+  background-color: #244572;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 10px;
+  transition: background-color 0.3s ease; /* Adding a smooth transition effect */
+}
+
+.view-details-button:hover {
+  background-color: #44b4d5; 
+}
+
+.view-details-link {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* View details link styles */
+.view-details-link {
+  text-decoration: none; /* Remove underline */
+  color: #fff; /* Set the desired color */
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: color 0.3s ease; /* Adding a smooth transition effect */
+}
+
+.view-details-link:hover {
+  color: #fff; /* Ensure the color stays the same on hover */
+}
+/* Hotel name styles */
+.hotel-name a {
+  text-decoration: none; /* Remove underline */
+  color: #400564; /* Set the desired color */
+}
+
+/* Hotel name hover effect */
+.hotel-name a:hover {
+  color: #591050; /* Ensure the color stays the same on hover */
+}
+
+
+
+  </style>
+  <title>Hotels in Lonavala&Khandala</title>
+</head>
+<body>
+<div class="container">
+  <h1 class="heading">Hotels in Lonavala and Khandala</h1>
+  <div class="filter">
+    <h2>Price Range Filter</h2>
+    <label for="priceRange">Select Price Range:</label>
+    <select id="priceRange">
+      <option value="all">All</option>
+      <option value="10000-15000">10000 - 15000</option>
+      <option value="15000-19000">15000 - 19000</option>
+
+    </select>
+    <button id="filterButton">Apply Filters</button>
+  </div>
+  <div class="hotel" data-price="18043">
+    <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRW0Ade4y8VehBnz3YBL5nG1aPxh6zDBqGf10Li4P5oW2knoNY29SVb1NoxzzTH" alt="Zara Resort">
+    <div class="hotel-description">
+
+
+      
+<div class="hotel-name" >
+      <h2><a href="Zaralonavala.html">Zara's Resort</a></h2>
+    </div>
+      <p class="location">
+        3-star hotel<br>
+        Set 2 km from Khandala train station, this relaxed resort is 5 km from Lonavala Lake and 12 km from Kune Falls, India is 14th highest.<br>
+                 Price per night: &#8377; 18043 <br>
+        11.4 Km From City Centre<br>
+       
+      </p>
+      <p class="description">
+        Laid-back spot offering warmly decorated rooms & a restaurant, plus an outdoor pool & lush grounds.
+      </p>
+      <button class="view-details-button"><a href="Zaralonavala.html" class="view-details-link">View Details</a></button>
+    </div>
+  </div>
+
+  <div class="hotel" data-price="18043">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQxlkSxFXJm59q-FbAT_r-3cqe6qjq0rOAy_jNqi_BNivuJ0u6PiSc5aRYONBZ" alt=" Elite Hotel">
+           
+    <div class="hotel-description">
+        <div class="hotel-name">
+                <h2><a href="Elitelon.html">Elite Hotel</a></h2></div>
+                <p class="location">
+                72, 1, Old Mumbai - Pune Hwy, Ambience Villa, Khandala, Lonavala, Kune N.m., Maharashtra 410401
+                <br> Price per night: &#8377; 18043
+                </p>
+      <p class="description">
+        
+        Elite Hotel is a reasonable option for travelers looking out for an apartment in Lonavala. 
+      </p>
+      <button class="view-details-button"><a href="Elitelon.html" class="view-details-link">View Details</a></button>
+    </div>
+  </div>
+
+  <div class="hotel" data-price="14999">
+    <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSnpMJ5a2sumwkmtIu5ZI-zR9cAbsZwOEZhomeKY84Nlw0_uoIn7SI-0pklUJlr" alt="VelvetCountryResort">
+    <div class="hotel-description">
+        <div class="hotel-name"> <h2><a href="Velvetlon.html">Velvet County Resort, Lonavala - Khandala</a></h2></div>
+                3-star hotel<br>S. No 44, 45/2, Plot 13A, 14, Vikas Valley, Khandala, Lonavala, Maharashtra 410301<br>
+                <p class="location">
+                Set in a collection of concrete buildings with stone accents, this relaxed hotel surrounded by lush landscape is 2 km from Khandala train station and 12 km from the scenic Kune Falls.
+                Price per night: &#8377; 14999</p>
+      <p class="description">
+        The Hotel has 222 rooms which include 75 suites. We have different categories of rooms which are: Keys Rooms, Indulge Rooms, Studio Apartments, One Bedroom Apartments.
+      </p>
+      <button class="view-details-button"><a href="Velvetlon.html" class="view-details-link">View Details</a></button>
+    </div>
+  </div>
+  <script>
+    const priceRangeSelect = document.getElementById('priceRange');
+    const filterButton = document.getElementById('filterButton');
+    const hotels = document.querySelectorAll('.hotel');
+  
+    filterButton.addEventListener('click', applyFilters);
+  
+    function applyFilters() {
+      const selectedPriceRange = priceRangeSelect.value;
+  
+      hotels.forEach((hotel) => {
+        const price = parseInt(hotel.getAttribute('data-price'));
+  
+        if (selectedPriceRange === 'all' || (price >= parseInt(selectedPriceRange.split('-')[0]) && price <= parseInt(selectedPriceRange.split('-')[1]))) {
+          hotel.style.display = 'flex';
+        } else {
+          hotel.style.display = 'none';
+        }
+      });
+    }
+  </script>
+</body>
+</html>
+

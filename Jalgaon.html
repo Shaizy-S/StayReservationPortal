@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  /* Reset CSS */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  /* Global styles */
+  body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to left, #ffcccc, #d4ebf2);
+    font-size: 16px;
+  }
+  .filter {
+      background-color: #fff;
+      border: 2px solid black;
+      padding: 10px;
+      margin-bottom: 20px;
+    }
+
+    /* Style for the label and select elements within the filter container */
+    .filter label {
+      font-weight: bold;
+    }
+
+    .filter select {
+      width: 100px;
+      padding: 5px;
+    }
+
+    /* Style for the Apply Filters button */
+    .filter button {
+      background-color: #244572;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+
+    .filter button:hover {
+      background-color: #44b4d5;
+    }
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  /* Heading styles */
+  .heading {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  /* Hotel styles */
+  .hotel {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    border: 2px solid black;
+    padding: 20px;
+    background-color: #fff;
+  }
+
+  .hotel img {
+    width: 300px;
+    height: auto;
+    margin-right: 20px;
+    object-fit: cover;
+  }
+
+  .hotel-description {
+    flex: 1;
+  }
+
+  /* Hotel name styles */
+  .hotel-name {
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: #333;
+  }
+
+  /* Location styles */
+  .location {
+    font-size: 1rem;
+    color: #666;
+    margin-top: 10px;
+  }
+
+  /* Description styles */
+  .description {
+    font-size: 1rem;
+    color: #333;
+    margin-top: 10px;
+  }
+
+  /* View details button styles */
+  .view-details-button {
+    background-color: #244572;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+  }
+
+  .view-details-button:hover {
+    background-color: #44b4d5;
+  }
+
+  .view-details-link {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+</style>
+<title>Hotels in Jalgaon</title>
+</head>
+<body>
+<div class="container">
+  <h1 class="heading">Hotels in Jalgaon</h1>
+  <div class="filter">
+    <h2>Price Range Filter</h2>
+    <label for="priceRange">Select Price Range:</label>
+    <select id="priceRange">
+      <option value="all">All</option>
+      <option value="2000-3000">2000 - 3000</option>
+      <option value="3000-4000">3000 - 4000</option>
+
+    </select>
+    <button id="filterButton">Apply Filters</button>
+  </div>
+  <div class="hotel" data-price="1608">
+    <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-s/02/4b/38/2b/front-stoop-great-spot.jpg?w=600&h=-1&s=1" alt="Hotel 1">
+    <div class="hotel-description">
+      <h2><a href="hotel plaza.html" class="hotel-name">Hotel Plaza</a></h2>
+    
+     <p >   Navi Peth Near Railway Station, Jalgaon <br>
+        
+         Rs. 1,608 per room per night
+      </p>
+      
+      <p>
+        Travel Sustainable Level 1<br>
+        Located in Jālgaon, 300 metres from Jalgaon Railway Station, Hotel Plaza features accommodation with a shared lounge and free private parking <br> Family-friendly environment play area for kids and more.
+
+    
+      </p> <br>
+      <button class="view-details-button"><a href="hotel plaza.html" class="view-details-link">View Details</a></button>
+    </div>
+  </div>
+
+  <div class="hotel" data-price="2155">
+    <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/19/bb/64/ba/img-20191013-100817-largejpg.jpg?w=600&h=-1&s=1" alt="Hotel 2">
+    <div class="hotel-description">
+      <h2><a href="hotel royal palace.html" class="hotel-name">Hotel Royal Palace</a></h2>
+     <p > Mahabal Road Near Janta Bank, Jalgaon 
+       Rs. 2,155 1 room per night
+      </p>
+      <br>
+      <p> Travel Sustainable Level 2<br>
+        Hotel Royal Palace Is A Premium Business Hotel Centrally Located In The Heart Of The City. Well Positioned Spacious Rooms, Classic Suite And Royal Presidential Suite Opening Into Atrium Lobby, The Lobby’s Refreshing Décor Of Fountain, Waterfalls And Trees Contrasting Strikingly With Capsule Like Glass Elevator. Surrounding The Lobby There Is An Excellent Multicuisine Restaurant And Also Beautiful Terrace Garden Restaurant, Well Equipped Conference And Banquet Hall And Excellent Other Facilities. </p> <br>
+      <button class="view-details-button"><a href="hotel royal palace.html" class="view-details-link">View Details</a></button>
+    </div>
+  </div>
+
+  <div class="hotel" data-price="2222">
+    <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/18/61/99/53/the-imperia-residency.jpg?w=600&h=-1&s=1" alt="Hotel 3">
+    <div class="hotel-description">
+      <h2><a href="hotel imperia.html" class="hotel-name">The Imperia Residency</a></h2>
+   
+    <p >  
+        The Imperia Residency Midc Ajanta Road, Jalgaon  <br>
+     Rs. 2,222 per room per night
+      </p>
+      
+      <p> 
+        Travel Sustainable Level 1<br>
+        Looking for a place to stay in Jalgaon? Then look no further than The Imperia Residency, a budget friendly hotel that brings the best of Jalgaon to your doorstep.
+
+        You will enjoy relaxing rooms that offer air conditioning and a refrigerator, and you can stay connected during your stay as The Imperia Residency offers guests free wifi .</p><br>
+      <button class="view-details-button"><a href="hotel imperia.html" class="view-details-link">View Details</a></button>
+    </div>
+  </div>
+
+  <div class="hotel" data-price="3000">
+    <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0d/b5/8a/51/hotel-entrance.jpg?w=900&h=-1&s=1" alt="Hotel 4">
+    <div class="hotel-description">
+      <h2><a href="hotel sliver palace.html" class="hotel-name">Hotel Silver Palace</a></h2>
+        <p >Station Road Navi Peth, Jaikisan Wadi, Jalgaon 
+        <br>
+        Travel Sustainable Level 2 <br>
+        Ai mins away <br>
+        Rs. 3,000 per room per night
+      </p>
+      <p>
+        Finding an ideal luxury small hotel in Jalgaon does not have to be difficult. Welcome to Hotel Silver Palace, a nice option for travellers like you.
+
+        Guest rooms offer air conditioning, and Hotel Silver Palace makes getting online easy as free wifi is available.
+      </p> <br>
+      <button class="view-details-button"><a href="hotel sliver palace.html" class="view-details-link">View Details</a></button>
+    </div>
+  </div>
+</div>
+<script>
+  const priceRangeSelect = document.getElementById('priceRange');
+  const filterButton = document.getElementById('filterButton');
+  const hotels = document.querySelectorAll('.hotel');
+
+  filterButton.addEventListener('click', applyFilters);
+
+  function applyFilters() {
+    const selectedPriceRange = priceRangeSelect.value;
+
+    hotels.forEach((hotel) => {
+      const price = parseInt(hotel.getAttribute('data-price'));
+
+      if (selectedPriceRange === 'all' || (price >= parseInt(selectedPriceRange.split('-')[0]) && price <= parseInt(selectedPriceRange.split('-')[1]))) {
+        hotel.style.display = 'flex';
+      } else {
+        hotel.style.display = 'none';
+      }
+    });
+  }
+</script>
+</body>
+</html>

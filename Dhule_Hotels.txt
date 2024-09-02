@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    /* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Global styles */
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to left, #ffcccc, #d4ebf2);
+  font-size: 16px;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Heading styles */
+.heading {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Hotel styles */
+.hotel {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  border: 2px solid black;
+  padding: 20px;
+  background-color: #fff;
+}
+
+.hotel img {
+  width: 300px;
+  height: auto;
+  margin-right: 20px;
+  object-fit: cover;
+}
+
+.hotel-description {
+  flex: 1;
+}
+
+/* Hotel name styles */
+.hotel-name {
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: #333;
+}
+
+/* Location styles */
+.location {
+  font-size: 1rem;
+  color: #666;
+  margin-top: 10px;
+}
+
+/* Description styles */
+.description {
+  font-size: 1rem;
+  color: #333;
+  margin-top: 10px;
+}
+
+/* View details button styles */
+.view-details-button {
+  background-color: #244572;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 10px;
+}
+
+.view-details-link {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+/* View details button styles */
+.view-details-button {
+  background-color: #244572;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 10px;
+  transition: background-color 0.3s ease; /* Adding a smooth transition effect */
+}
+
+.view-details-button:hover {
+  background-color: #44b4d5; 
+}
+
+.view-details-link {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+
+  </style>
+  <title>Hotels in Dhule</title>
+</head>
+<body>
+<div class="container">
+  <h1 class="heading">Hotels in Dhule</h1>
+  <div class="hotel">
+    <img src="https://pix8.agoda.net/hotelImages/36223847/-1/c54966adef25414db0bd3770bd7df69a.jpg?ce=0&s=1024x768" alt="Hotel 1">
+    <div class="hotel-description">
+      <h2><a href="#" class="hotel-name"> Golden Leaf Resort
+    </a></h2>
+      <p class="location">Dhule, India, 424001 <br> <br>
+        &#8377; 2770 per room per night</p>
+      <p class="description">The car parking and the Wi-Fi are always free, so you can stay in touch and come and go as you please. Conveniently situated in the Dhule part of Dhule, this property puts you close to attractions and interesting dining options. This 3-star property features restaurant to make your stay more indulgent and memorable.
+      </p>
+      <button class="view-details-button"><a href="#" class="view-details-link">View Details</a></button>
+    </div>
+  </div>
+
+  <div class="hotel">
+    <img src="https://pix8.agoda.net/hotelImages/37214602/-1/95a6efad5f5e116e75de61d40567a81f.jpg?ce=0&s=1024x768" alt="Hotel 2">
+    <div class="hotel-description">
+      <h2><a href="#" class="hotel-name">Hotel Ruturaj Regency
+    </a></h2>
+      <p class="location">Station Road, Dhule, Dhule, India, 424001 <br>
+      
+        &#8377; 2395 per room per night <br>
+      </p>
+      <p class="description">The car parking and the Wi-Fi are always free, so you can stay in touch and come and go as you please. Conveniently situated in the Dhule part of Dhule, this property puts you close to attractions and interesting dining options. As an added bonus, restaurant is provided on-site to conveniently serve your needs.
+
+
+      </p>
+      <button class="view-details-button"><a href="#" class="view-details-link">View Details</a></button>
+    </div>
+  </div>
+
+  <div class="hotel">
+    <img src="https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/492945481.jpg?k=934623e48f0b629711899c6f6621a797bec4f092eb9cbbe7e715a935abe193e9&o=" alt="Hotel 3">
+    <div class="hotel-description">
+      <h2><a href="#" class="hotel-name">Hotel Ganapati Palace</a></h2>
+      <p class="location"><br>Hotel Ganapati Palace Malegaon Road, Old Mumbai Agra Highway, Dhule, Dhule, Dhule, India, 424001 
+        <br>
+        &#8377; 1790 per room per night
+      </p>
+      <p class="description">Conveniently situated in the Dhule part of Dhule, this property puts you close to attractions and interesting dining options.
+      </p>
+      <button class="view-details-button"><a href="#" class="view-details-link">View Details</a></button>
+    </div>
+  </div>
+
+  <div class="hotel">
+    <img src="https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/428981229.jpg?k=43d4a1f1865656a0c9ddcc7af3328537c9648488e06a8f9373bba0289ee79486&o=" alt="Hotel 4">
+    <div class="hotel-description">
+      <h2><a href="#" class="hotel-name">Hotel New Manas
+    </a></h2>
+      <p class="location">Agra Road Nearm Avdhan Toll Plaza Avdhan MIDC, Dhule, Dhule, India, 424006 
+        <br>
+        <br>
+        &#8377; 1847 per room per night
+      </p>
+      <p class="description">Conveniently situated in the Dhule part of Dhule, this property puts you close to attractions and interesting dining options.
+
+
+      </p>
+      <button class="view-details-button"><a href="#" class="view-details-link">View Details</a></button>
+    </div>
+  </div>
+</div>
+</body>
+</html>

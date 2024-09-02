@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adventure Avenues</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>
+
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .box {
+            margin: 20px auto;
+            text-align: center;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+        }
+
+        header {
+            padding: 20px 0;
+        }
+
+        header img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        section.booking {
+            margin-top: 20px;
+        }
+
+        form {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-color: #4caf50;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        #error {
+            color: red;
+            margin-top: 10px;
+        }
+
+        footer {
+            margin-top: 20px;
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+        }
+    </style>
+   <!-- Link to your CSS file -->
+
+</head>
+<body>
+   <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adventure Avenues</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>
+
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .box {
+            margin: 20px auto;
+            text-align: center;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+        }
+
+        header {
+            padding: 20px 0;
+        }
+
+        header img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        section.booking {
+            margin-top: 20px;
+        }
+
+        form {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-color: #4caf50;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        #error {
+            color: red;
+            margin-top: 10px;
+        }
+
+        footer {
+            margin-top: 20px;
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+        }
+    </style>
+   
+   <!-- Link to your CSS file -->
+
+</head>
+<body>
+    <nav class="navbar bg-body-tertiary fixed-top">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">AdventureAvenues</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#">Sign In/Create Account</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Badge Points</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Dropdown
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li>
+                      <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  </ul>
+                </li>
+              </ul>
+              <form class="d-flex mt-3" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    <div class="box">
+    <header>
+    
+    <img src="Logo.jpg" alt="AdventureAvenueLogo" title="AdventureAvenues" height="150px" width="150px"><br>
+    <h1 >AdventureAvenue.com</h1>
+
+    </header>
+
+    <section class="booking">
+        <h2>Adventure Awaits</h2>
+<form id="dateForm" onsubmit="return validateDates()"> 
+<label for="checkin">Check-In Date:</label> 
+<input type="date" id="checkin" required><br> 
+<label for="checkout">Check-Out Date:</label>
+ <input type="date" id="checkout" required><br>
+<label for="guests">Guests:</label>
+<input type="number" id="guests" name="guests" min="1" max="6" required><br>
+</form>
+<form id="cityForm" action="city.php" method="post">
+    <label for="city">Select a city:</label>
+    <select id="city" name="city" >
+        <option vale=""diabled selected>Select a ciy</option>
+        <option value="Ahmednagar">Ahmednagar</option>
+        <option value="Akola">Akola</option>
+        <option value="Alibaug">Alibaug</option>
+        <option value="Amravati">Amravati</option>
+        <option value="Aurangabad">Aurangabad</option>
+        <option value="Chandrapur">Chandrapur</option>
+        <option value="Dhule">Dhule</option>
+        <option value="Jalgaon">Jalgaon</option>
+        <option value="Kolhapur">Kolhapur</option>
+        <option value="Latur">Latur</option>
+<option value="LonavalaKhandala">Lonavala and Khandala</option>
+<option value="Mahabaleshwar">Mahabaleshwar</option>
+        <option value="Mumbai">Mumbai</option>
+        <option value="Nagpur">Nagpur</option>
+        <option value="Nashik">Nashik</option>
+        <option value="Panvel">Panvel</option>
+        <option value="Pune">Pune</option>
+        <option value="Ratnagiri">Ratnagiri</option>
+        <option value="Satara">Satara</option>
+        <option value="Shirdi">Shirdi</option>
+        <option value="Solapur">Solapur</option>
+        <option value="Thane">Thane</option>
+
+        <!-- Add more city options here -->
+    </select>
+    <input type="submit" value="Submit">
+</form>
+
+
+
+    <p id="result"></p>
+<br>
+ <p id="error" style="color: red;"></p> 
+ <script>
+    function validateDates() {
+        var checkinDate = new Date(formatDate(document.getElementById("checkin").value));
+        var checkoutDate = new Date(formatDate(document.getElementById("checkout").value));
+    
+        // Set hours to 00:00:00 to compare only the dates
+        checkinDate.setHours(0, 0, 0, 0);
+        checkoutDate.setHours(0, 0, 0, 0);
+    
+        if (checkoutDate <= checkinDate) {
+            document.getElementById("error").innerText = "Check-out date must be after the check-in date.";
+            return false;
+        } else {
+            document.getElementById("error").innerText = "";
+            return true;
+        }
+    }
+    
+    function formatDate(dateString) {
+        // Convert MM/DD/YYYY to YYYY-MM-DD
+        var parts = dateString.split("/");
+        return parts[2] + "-" + parts[0] + "-" + parts[1];
+    }
+    
+    document.getElementById("cityForm").addEventListener("submit", function (event) {
+        event.preventDefault(); // Prevent the default form submission
+    
+        const selectedCity = document.getElementById("city").value;
+    
+        if (selectedCity) {
+            // Redirect to the page related to the selected city
+            window.location.href = selectedCity + ".html";
+        } else {
+            // Display an error message if no city is selected
+            alert("Please select a city before submitting.");
+        }
+    });
+    </script>
+    
+    
+    </section>
+
+ 
+
+
+
+
+
+    <footer>
+        <p>&copy; 2023 Hotel Name. All rights reserved.</p>
+    </footer>
+
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
+</script>
+
+</body>
+</html>
+
+    <div class="box">
+    <header>
+    
+    <img src="Logo.jpg" alt="AdventureAvenueLogo" title="AdventureAvenues" height="150px" width="150px"><br>
+    <h1 >AdventureAvenue.com</h1>
+
+    </header>
+
+    <section class="booking">
+        <h2>Adventure Awaits</h2>
+<form id="dateForm" onsubmit="return validateDates()"> 
+<label for="checkin">Check-In Date:</label> 
+<input type="date" id="checkin" required><br> 
+<label for="checkout">Check-Out Date:</label>
+ <input type="date" id="checkout" required><br>
+<label for="guests">Guests:</label>
+<input type="number" id="guests" name="guests" min="1" max="6" required><br>
+</form>
+<form id="cityForm" action="city.php" method="post">
+    <label for="city">Select a city:</label>
+    <select id="city" name="city" >
+        <option vale=""diabled selected>Select a ciy</option>
+        <option value="Ahmednagar">Ahmednagar</option>
+        <option value="Akola">Akola</option>
+        <option value="Alibaug">Alibaug</option>
+        <option value="Amravati">Amravati</option>
+        <option value="Aurangabad">Aurangabad</option>
+        <option value="Chandrapur">Chandrapur</option>
+        <option value="Dhule">Dhule</option>
+        <option value="Jalgaon">Jalgaon</option>
+        <option value="Kolhapur">Kolhapur</option>
+        <option value="Latur">Latur</option>
+<option value="LonavalaKhandala">Lonavala and Khandala</option>
+<option value="Mahabaleshwar">Mahabaleshwar</option>
+        <option value="Mumbai">Mumbai</option>
+        <option value="Nagpur">Nagpur</option>
+        <option value="Nashik">Nashik</option>
+        <option value="Panvel">Panvel</option>
+        <option value="Pune">Pune</option>
+        <option value="Ratnagiri">Ratnagiri</option>
+        <option value="Satara">Satara</option>
+        <option value="Shirdi">Shirdi</option>
+        <option value="Solapur">Solapur</option>
+        <option value="Thane">Thane</option>
+
+        <!-- Add more city options here -->
+    </select>
+    <input type="submit" value="Submit">
+</form>
+
+
+
+    <p id="result"></p>
+<br>
+ <p id="error" style="color: red;"></p> 
+ <script>
+    function validateDates() {
+        var checkinDate = new Date(formatDate(document.getElementById("checkin").value));
+        var checkoutDate = new Date(formatDate(document.getElementById("checkout").value));
+    
+        // Set hours to 00:00:00 to compare only the dates
+        checkinDate.setHours(0, 0, 0, 0);
+        checkoutDate.setHours(0, 0, 0, 0);
+    
+        if (checkoutDate <= checkinDate) {
+            document.getElementById("error").innerText = "Check-out date must be after the check-in date.";
+            return false;
+        } else {
+            document.getElementById("error").innerText = "";
+            return true;
+        }
+    }
+    
+    function formatDate(dateString) {
+        // Convert MM/DD/YYYY to YYYY-MM-DD
+        var parts = dateString.split("/");
+        return parts[2] + "-" + parts[0] + "-" + parts[1];
+    }
+    
+    document.getElementById("cityForm").addEventListener("submit", function (event) {
+        event.preventDefault(); // Prevent the default form submission
+    
+        const selectedCity = document.getElementById("city").value;
+    
+        if (selectedCity) {
+            // Redirect to the page related to the selected city
+            window.location.href = selectedCity + ".html";
+        } else {
+            // Display an error message if no city is selected
+            alert("Please select a city before submitting.");
+        }
+    });
+    </script>
+    
+    
+    </section>
+
+ 
+
+
+
+
+
+    <footer>
+        <p>&copy; 2023 Hotel Name. All rights reserved.</p>
+    </footer>
+
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
+</script>
+
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to left, #ffcccc, #67aec4);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        .container {
+            display: flex;
+            max-width: 1200px;
+            max-height: 1000px;
+            width: 100%;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+        }
+        .form-box {
+    flex: 1;
+    padding: 20px;
+    width: 600px;
+    height: 550px;
+}
+
+        label {
+            display: block;
+            margin: 10px 0;
+            color: #333;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+        }
+        .image-box {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white; /* Background color for the image box */
+    padding: 10px;
+    height: 600px;
+}
+
+.image-box img {
+    width: 600px;
+    height: 500px;
+}
+
+        #password_error {
+            color: red;
+            display: none;
+        }
+
+        input[type="submit"] {
+            background-color: #4caf50;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="image-box">
+            <!-- Your existing image box content -->
+            <img src="https://cdn.dribbble.com/users/605926/screenshots/4375841/maharashtra.png?compress=1&resize=800x600" alt="Image">
+        </div>
+        <div class="form-box">    
+            <h2>Create an Account</h2>
+            <form id="signupForm" method="POST">
+                <label for="username">Username:</label>
+                <input type="text" id="signupUsername" name="username" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="password">Password:</label>
+                <input type="password" id="signupPassword" name="password" required>
+                
+                <label for="confirm_password">Confirm Password:</label>
+                <input type="password" id="confirmPassword" name="confirm_password" required>
+
+                <div id="password_error" style="color: red; display: none;">Passwords do not match.</div>
+                
+                <input type="submit" name="submit" value="Create Account">
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('signupForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            var password = document.getElementById("signupPassword").value;
+            var confirm_password = document.getElementById("confirmPassword").value;
+            var password_error = document.getElementById("password_error");
+
+            if (password !== confirm_password) {
+                password_error.style.display = "block";
+            } else {
+                password_error.style.display = "none";
+                const userName = document.getElementById('email').value;
+                var confirmation = confirm('Registration successful! Welcome, ' + userName + '! Click OK to continue.');
+                
+                if (confirmation) {
+                    // Redirect to the main page
+                    window.location.href = "mainpagehotel.html";
+                }
+            }
+        });
+    </script>
+</body>
+</html>

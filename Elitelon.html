@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Elite Hotel</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="icon" href="file:///D:/VSCode/Logo.jpg" type="image/png">
+  <link rel="shortcut icon" href="file:///D:/VSCode/Logo.jpg" type="image/png">
+
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      line-height: 1.6;
+      color: #333;
+      margin: 0;
+      padding: 50px;
+      background-color: #f8f8f8;
+      width: 1000px;
+    }
+
+    /* Additional Styles for Enhancement */
+
+body {
+  background-image: url('https://i.pinimg.com/736x/06/0d/61/060d61b2854766349483461890b15e42.jpg'); /* Replace 'path/to/your/image.jpg' with the actual path to your image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  margin: 0;
+  padding: 30px;
+}
+
+
+
+div.badge{
+      width: 400px;
+      height: 400px;
+      position: fixed;
+      right: -10px;
+    }
+
+    .badge{
+      
+      background-color: #cb6092;
+      color: white;
+    
+      width: 200px;
+    }
+    .badge-icon {
+      font-size: 60px;
+    }
+
+    .badge-title {
+      font-size: 24px;
+      margin: 10px 0;
+    }
+
+    .badge-points {
+      font-size: 36px;
+      font-weight: bold;
+    }
+
+    .badge-description {
+      font-size: 10px;
+      margin: 20px 0;
+    }
+    
+
+    .badge-action {
+      background-color: #00A800;
+      color: #fff;
+      font-size: 18px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      text-decoration: none;
+    }
+
+    .badge-action:hover {
+      background-color: #009900;
+    }
+    
+div{
+    border: #333;
+    border: 2px;
+}
+
+/* ... (rest of your existing styles) */
+
+
+    h1, h2, h3 {
+      color: #004080;
+    }
+
+    p {
+      margin-bottom: 20px;
+    }
+
+    a {
+      color: #0066cc;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .carousel {
+      max-width: 600px;
+      margin: 20px auto;
+    }
+
+    .carousel-item img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .location, .accommodations, .amenities, .activities, .dining, .weddings {
+      margin-top: 30px;
+    }
+
+    .section-title {
+      color: #004080;
+      border-bottom: 2px solid #004080;
+      padding-bottom: 5px;
+      margin-bottom: 20px;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    ul li {
+      margin-bottom: 10px;
+    }
+
+    #book-now {
+      display: block;
+      width: 150px;
+      padding: 10px;
+      background-color: #004080;
+      color: #fff;
+      text-align: center;
+      text-decoration: none;
+      border-radius: 5px;
+      margin-top: 20px;
+    }
+
+    #book-now:hover {
+      background-color: #0066cc;
+    }
+
+
+    
+  </style>
+</head>
+<body>
+
+  <div class="badge">
+    <br><br><br><br>
+        <span class="badge-icon">🏆</span>
+        <h1 class="badge-title">Earn Badge Points</h1>
+        <br><br>
+        <p class="badge-points">500 Points</p>
+        <p class="badge-description"><div style="font-size: 14px;">Book a hotel and earn 500 badge points.
+          <br>
+          <br>Redeem points for fantastic discounts<br> on your next booking.
+          <br>
+          <br> Click 'See Details' to learn <br>more about this exciting offer!</div>
+        </p>
+        <a href="#" class="badge-action">See details</a>
+      
+  </div>
+  <h1>Elite Hotel</h1>
+  
+
+    Hotel Elite is a budget-friendly hotel located in the hill station of Khandala, Maharashtra, India. It is a good option for travelers who are looking for a comfortable and affordable stay near the many attractions of Khandala and Lonavala.
+    <br>
+    Rooms and Amenities
+    
+    Hotel Elite offers a variety of room types, including standard rooms, deluxe rooms, and family rooms. All rooms are air-conditioned and have basic amenities such as a TV, telephone, and tea/coffee maker. Some rooms also have balconies with views of the surrounding hills.<br>
+    
+    The hotel also has a restaurant that serves Indian and international cuisine. There is also a bar and a swimming pool.</p>
+  <div id="carouselExampleIndicators" class="carousel slide" width="50px" height="400px">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="https://content.jdmagicbox.com/comp/lonavala/l7/9999p2114.2114.171204154546.h2l7/catalogue/hotel-elite-inn-lonavala-hotels-hctwu.jpg" class="d-block w-100" style="width:50px ;height:400px;">
+      </div>
+      <div class="carousel-item">
+        <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/355692390.jpg?k=fb0a73cd030d9a294b44ab84f41911194d8e9b4027b88831f3764e93a257a079&o=&hp=1" class="d-block w-100" style="width:50px ;height:400px;"  >
+      </div>
+      <div class="carousel-item">
+        <img src="https://www.inlonavala.com/data/Photos/OriginalPhoto/7492/749294/749294861/photo-lonavala-28.JPEG" class="d-block w-100" style="width:50px ;height:400px;" >
+      </div>
+      <div class="carousel-item">
+        <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/355692393.jpg?k=7d711cfee10001ebd8b8fe2ed9550e2b49f7c01f25f7ec927dd4bedf473760e8&o=&hp=1" class="d-block w-100" style="width:50px ;height:400px;">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+<div class="price">
+  <h2 class="section-title">Price</h2>
+  <p>Experience luxury starting at <span class="price-amount">&#8377;18,043</span> per night.</p>
+</div>
+
+
+  <div class="location">
+    <h2 class="section-title">Location</h2>
+    <p>Location<br>
+
+        Hotel Elite is located in the heart of Khandala, close to many of the town's attractions, such as the Duke's Nose viewpoint, the Karla Caves, and the Bhaja Caves. It is also well-connected to Lonavala, which is just a short drive away.
+        </p>
+  </div>
+
+  <div class="accommodations">
+    <h2 class="section-title">Hotel Policies</h2>
+    <p>  <br>
+        
+        Check-in time is 2:00 PM and check-out time is 12:00 PM.
+        Early check-in and late check-out may be available for an additional charge.
+        Children of all ages are welcome.
+        Extra beds are available for an additional charge.
+        Pets are not allowed.
+        </p>
+  </div>
+
+  <div class="amenities">
+    <h2 class="section-title">Booking Information</h2><p>
+    <br>
+        
+        To book a room at Hotel Elite, you can visit the hotel's website or contact them directly by phone or email.
+        <br>
+        </p>
+  </div>
+
+  <div class="activities">
+    <h2 class="section-title">Additional Information</h2><p>
+    <br>
+        
+    Hotel Elite is a popular choice for budget travelers, families, and couples.
+    The hotel has a good reputation for its cleanliness, hospitality, and value for money.
+    The hotel is located in a convenient location, close to many of Khandala's attractions.</p>
+  </div>
+
+  
+  <h2>Book your stay today!</h2>
+  <a href="Bookelite.html" id="book-now">Book Now</a>
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>
