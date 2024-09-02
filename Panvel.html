@@ -1,0 +1,261 @@
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    /* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Global styles */
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to left, #ffcccc, #d4ebf2);
+  font-size: 16px;
+}
+.filter {
+      background-color: #fff;
+      border: 2px solid black;
+      padding: 10px;
+      margin-bottom: 20px;
+    }
+
+    /* Style for the label and select elements within the filter container */
+    .filter label {
+      font-weight: bold;
+    }
+
+    .filter select {
+      width: 100px;
+      padding: 5px;
+    }
+
+    /* Style for the Apply Filters button */
+    .filter button {
+      background-color: #244572;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+
+    .filter button:hover {
+      background-color: #44b4d5;
+    }
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Heading styles */
+.heading {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Hotel styles */
+.hotel {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  border: 2px solid black;
+  padding: 20px;
+  background-color: #fff;
+}
+
+.hotel img {
+  width: 300px;
+  height: auto;
+  margin-right: 20px;
+  object-fit: cover;
+}
+
+.hotel-description {
+  flex: 1;
+}
+
+/* Hotel name styles */
+.hotel-name {
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: #333;
+}
+
+/* Location styles */
+.location {
+  font-size: 1rem;
+  color: #666;
+  margin-top: 10px;
+}
+
+/* Description styles */
+.description {
+  font-size: 1rem;
+  color: #333;
+  margin-top: 10px;
+}
+
+/* View details button styles */
+.view-details-button {
+  background-color: #244572;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 10px;
+}
+
+.view-details-link {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+/* View details button styles */
+.view-details-button {
+  background-color: #244572;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 10px;
+  transition: background-color 0.3s ease; /* Adding a smooth transition effect */
+}
+
+.view-details-button:hover {
+  background-color: #44b4d5; 
+}
+
+.view-details-link {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* View details link styles */
+.view-details-link {
+  text-decoration: none; /* Remove underline */
+  color: #fff; /* Set the desired color */
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: color 0.3s ease; /* Adding a smooth transition effect */
+}
+
+.view-details-link:hover {
+  color: #fff; /* Ensure the color stays the same on hover */
+}
+/* Hotel name styles */
+.hotel-name a {
+  text-decoration: none; /* Remove underline */
+  color: #400564; /* Set the desired color */
+}
+
+/* Hotel name hover effect */
+.hotel-name a:hover {
+  color: #591050; /* Ensure the color stays the same on hover */
+}
+
+
+
+  </style>
+  <title>Hotels in Panvel</title>
+</head>
+<body>
+<div class="container">
+  <h1 class="heading">Hotels in Panvel</h1>
+  <div class="filter">
+    <h2>Price Range Filter</h2>
+    <label for="priceRange">Select Price Range:</label>
+    <select id="priceRange">
+      <option value="all">All</option>
+      <option value="2100-2600">2100 - 2600</option>
+      <option value="2600-4000">2600 - 4000</option>
+
+    </select>
+    <button id="filterButton">Apply Filters</button>
+  </div>
+  <div class="hotel" data-price="2657">
+    <img src="https://lh3.googleusercontent.com/p/AF1QipNZRezO6uMWczZyUz36hlss5EbZsnZEPqmihVKG=w287-h192-n-k-rw-no-v1" alt="Hotel Panvel Palace">
+    <div class="hotel-description">
+<div class="hotel-name">
+      <h2><a href="Pune1.html">Hotel Panvel Palace</a></h2>
+    </div>
+      <p class="location">
+        3-star hotel<br>
+        No.26/1-B, Opp S.T.Depot, 13/1, Mumbai - Pune Expy, Sukapur, Panvel, Navi Mumbai, Maharashtra 410206<br>
+        Great location overall for sightseeing, recreation, dining, and getting around
+                 Price per night: &#8377; 2657
+      </p>
+      <p class="description">
+        Book your Navi Mumbai stay at Hotel Panvel Palace with best prices.
+      </p>
+      <button class="view-details-button"><a href="Pune1.html" class="view-details-link">View Details</a></button>
+    </div>
+  </div>
+
+  <div class="hotel" data-price="2695">
+    <img src="https://lh3.googleusercontent.com/p/AF1QipO6_5nImNyPn55yBXK_AS_ZUwfz-ELcwliMPuWv=w480-h360-n-k-rw-no-v1" alt="Hotel Crown inn">
+           
+    <div class="hotel-description">
+        <div class="hotel-name">
+                <h2><a href="p2.html">Hotel Crown inn</a></h2></div>
+                <p class="location">
+                    3-star hotel<br>
+                    Plot No. 102, 4, Old Mumbai - Pune Highway, next to Patil Hospital, HOC Colony, Panvel, Navi Mumbai, Maharashtra 410206
+                <br> Price per night: &#8377; 2695
+                </p>
+      <p class="description">
+        
+        Unfussy rooms in a casual hotel offering a sleek restaurant/bar & rooftop event space.
+      </p>
+      <button class="view-details-button"><a href="p2.html" class="view-details-link">View Details</a></button>
+    </div>
+  </div>
+
+  <div class="hotel" data-price="2528">
+    <img src="https://r2imghtlak.mmtcdn.com/r2-mmt-htl-image/htl-imgs/201807061355476372-50dc270884d011e892350224510f5e5b.jpg?&output-quality=75&downsize=910:612&crop=910:612;4,0&output-format=jpg" alt="HOTEL VINAMRA RESIDENCY">
+    <div class="hotel-description">
+        <div class="hotel-name"> <h2><a href="p3.html">HOTEL VINAMRA RESIDENCY</a></h2></div>
+        3-star hotel<br>•Eco-certified<br>
+plot no 184, Sai Arcade, opp. st stand, Old Panvel, Panvel, Navi Mumbai, Maharashtra 410206
+                <p class="location">
+                    
+                Price per night: &#8377; 2528</p>
+      <p class="description">
+        Down-to-earth hotel for Indian nationals only, plus dining & vegetarian breakfast.
+      </p>
+      <button class="view-details-button"><a href="p3.html" class="view-details-link">View Details</a></button>
+    </div>
+  </div>
+  <script>
+    const priceRangeSelect = document.getElementById('priceRange');
+    const filterButton = document.getElementById('filterButton');
+    const hotels = document.querySelectorAll('.hotel');
+  
+    filterButton.addEventListener('click', applyFilters);
+  
+    function applyFilters() {
+      const selectedPriceRange = priceRangeSelect.value;
+  
+      hotels.forEach((hotel) => {
+        const price = parseInt(hotel.getAttribute('data-price'));
+  
+        if (selectedPriceRange === 'all' || (price >= parseInt(selectedPriceRange.split('-')[0]) && price <= parseInt(selectedPriceRange.split('-')[1]))) {
+          hotel.style.display = 'flex';
+        } else {
+          hotel.style.display = 'none';
+        }
+      });
+    }
+  </script>
+</body>
+</html>
+

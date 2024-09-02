@@ -1,0 +1,263 @@
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    /* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Global styles */
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to left, #ffcccc, #d4ebf2);
+  font-size: 16px;
+}
+.filter {
+      background-color: #fff;
+      border: 2px solid black;
+      padding: 10px;
+      margin-bottom: 20px;
+    }
+
+    /* Style for the label and select elements within the filter container */
+    .filter label {
+      font-weight: bold;
+    }
+
+    .filter select {
+      width: 100px;
+      padding: 5px;
+    }
+
+    /* Style for the Apply Filters button */
+    .filter button {
+      background-color: #244572;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+
+    .filter button:hover {
+      background-color: #44b4d5;
+    }
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Heading styles */
+.heading {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Hotel styles */
+.hotel {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  border: 2px solid black;
+  padding: 20px;
+  background-color: #fff;
+}
+
+.hotel img {
+  width: 300px;
+  height: auto;
+  margin-right: 20px;
+  object-fit: cover;
+}
+
+.hotel-description {
+  flex: 1;
+}
+
+/* Hotel name styles */
+.hotel-name {
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: #333;
+}
+
+/* Location styles */
+.location {
+  font-size: 1rem;
+  color: #666;
+  margin-top: 10px;
+}
+
+/* Description styles */
+.description {
+  font-size: 1rem;
+  color: #333;
+  margin-top: 10px;
+}
+
+/* View details button styles */
+.view-details-button {
+  background-color: #244572;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 10px;
+}
+
+.view-details-link {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+/* View details button styles */
+.view-details-button {
+  background-color: #244572;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 10px;
+  transition: background-color 0.3s ease; /* Adding a smooth transition effect */
+}
+
+.view-details-button:hover {
+  background-color: #44b4d5; 
+}
+
+.view-details-link {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* View details link styles */
+.view-details-link {
+  text-decoration: none; /* Remove underline */
+  color: #fff; /* Set the desired color */
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: color 0.3s ease; /* Adding a smooth transition effect */
+}
+
+.view-details-link:hover {
+  color: #fff; /* Ensure the color stays the same on hover */
+}
+/* Hotel name styles */
+.hotel-name a {
+  text-decoration: none; /* Remove underline */
+  color: #400564; /* Set the desired color */
+}
+
+/* Hotel name hover effect */
+.hotel-name a:hover {
+  color: #591050; /* Ensure the color stays the same on hover */
+}
+
+
+
+  </style>
+  <title>Hotels in Ratnagiri</title>
+  
+</head>
+<body>
+<div class="container">
+  <h1 class="heading">Hotels in Ratnagiri</h1>
+  <div class="filter">
+    <h2>Price Range Filter</h2>
+    <label for="priceRange">Select Price Range:</label>
+    <select id="priceRange">
+      <option value="all">All</option>
+      <option value="2000-3000">2000 - 3000</option>
+      <option value="3000-4000">3000 - 4000</option>
+      <option value="4000-6000">4000 - 6000</option>
+
+    </select>
+    <button id="filterButton">Apply Filters</button>
+  </div>
+  <div class="hotel" data-price="2204">
+    <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQYvw5m4oYBlRmBexmAE1M_hyK2_j45tmMcmOz8fsy2M-j-rG7Mht43QbLlAhEH" alt="Hotel Sea Fans">
+    <div class="hotel-description">
+<div class="hotel-name">
+      <h2><a href="R1.html">Hotel Sea Fans</a></h2>
+    </div>
+      <p class="location">
+        Sadanand Wadi, Ratnagiri<br>
+       
+                 Price per night: &#8377; 2204
+      </p>
+      <p class="description">
+        Amongst the stunning topographic features, serene sea beaches and ethnically rich monuments of the Mango City, Ratnagiri, this property have been standing tall with an on-site restaurant, offering unswerving world-class hospitality and remarkable comforts of superior quality.
+      </p>
+      <button class="view-details-button"><a href="R1.html" class="view-details-link">View Details</a></button>
+    </div>
+  </div>
+
+  <div class="hotel" data-price="5546">
+    <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQX2Dh0UBELyh7CcqfMCujXuwpcG4DV_TgdCdU_ky6lybdhm36QzwOgboJk9CST" alt=" Kohinoor Samudra Beach Resort
+
+    ">
+           
+    <div class="hotel-description">
+        <div class="hotel-name">
+                <h2><a href="R2.html"> Kohinoor Samudra Beach Resort
+
+                </a></h2></div>
+                <p class="location">
+                    Bhatye Village,Pawas Coastal Highway,Ratnagiri, Ratnagiri, Ratnagiri, India, 415639
+                <br> Price per night: &#8377; 5546
+                </p>
+      <p class="description">
+        The car parking and the Wi-Fi are always free, so you can stay in touch and come and go as you please. Conveniently situated in the Ratnagiri part of Ratnagiri, this property puts you close to attractions and interesting dining options. Rated with 4 stars, this high-quality property provides guests with access to restaurant, hot tub and indoor pool on-site.
+      </p>
+      <button class="view-details-button"><a href="R2.html" class="view-details-link">View Details</a></button>
+    </div>
+  </div>
+
+  <div class="hotel" data-price="3218">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmulXRX9l2CI4YbG2iSbJy7g0pb0oU_42fbZyP-wZzytATKQSvORmIKLTEDCDF" alt="Mango Valley Resorts Ganpatipule">
+    <div class="hotel-description">
+        <div class="hotel-name"> <h2><a href="r3.html">Mango Valley Resorts Ganpatipule</a></h2></div>
+        S.No.306, Old Nevre Kotawade Road Aaare-Ware Beach Road Near Ganpatipule, Dhokamale 415620 India
+                <p class="location">
+                    
+                Price per night: &#8377; 3218</p>
+      <p class="description">
+        The resort is located within a vast estate of over 50 acres. There are more than 500 Mango trees in the orchard that also contains many other trees such as cashew nuts.
+      </p>
+      <button class="view-details-button"><a href="r3.html" class="view-details-link">View Details</a></button>
+    </div>
+  </div>
+  <script>
+    const priceRangeSelect = document.getElementById('priceRange');
+    const filterButton = document.getElementById('filterButton');
+    const hotels = document.querySelectorAll('.hotel');
+  
+    filterButton.addEventListener('click', applyFilters);
+  
+    function applyFilters() {
+      const selectedPriceRange = priceRangeSelect.value;
+  
+      hotels.forEach((hotel) => {
+        const price = parseInt(hotel.getAttribute('data-price'));
+  
+        if (selectedPriceRange === 'all' || (price >= parseInt(selectedPriceRange.split('-')[0]) && price <= parseInt(selectedPriceRange.split('-')[1]))) {
+          hotel.style.display = 'flex';
+        } else {
+          hotel.style.display = 'none';
+        }
+      });
+    }
+  </script>
+</body>
+</html>
+

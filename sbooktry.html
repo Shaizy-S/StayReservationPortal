@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Description</title>
+</head>
+<body>
+    <h1>Hotel XYZ</h1>
+    <p>Description of the hotel goes here.</p>
+
+    <p id="priceDisplay">Price per night: $100</p>
+    
+    <label for="numberOfNights">Number of Nights:</label>
+    <input type="number" id="numberOfNights" value="1">
+
+    <label for="numberOfGuests">Number of Guests:</label>
+    <input type="number" id="numberOfGuests" value="1">
+
+    <p id="totalPriceDisplay">Total Price: $100</p>
+
+    <a href="book-now.html">Book Now</a>
+
+    <script>
+        // Calculate total price based on the number of nights and guests
+        function calculateTotalPrice() {
+            const pricePerNight = 100; // Replace with the actual price per night
+            const numberOfNights = parseInt(document.getElementById('numberOfNights').value, 10);
+            const numberOfGuests = parseInt(document.getElementById('numberOfGuests').value, 10);
+
+            const totalPrice = pricePerNight * numberOfNights * numberOfGuests;
+
+            // Display the total price on the page
+            document.getElementById('totalPriceDisplay').innerText = `Total Price: $${totalPrice}`;
+        }
+
+        // Update total price when the number of nights or guests changes
+        document.getElementById('numberOfNights').addEventListener('input', calculateTotalPrice);
+        document.getElementById('numberOfGuests').addEventListener('input', calculateTotalPrice);
+    </script>
+</body>
+</html>

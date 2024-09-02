@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review</title>
+
+    
+    <link rel="icon" href="file:///D:/VSCode/Logo.jpg" type="image/png">
+<link rel="shortcut icon" href="file:///D:/VSCode/Logo.jpg" type="image/png">
+    <style>
+        /* Add your CSS styles here */
+        #reviews {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .review {
+            border: 1px solid #ccc;
+            margin-bottom: 15px;
+            padding: 10px;
+        }
+        .reviewer {
+            font-weight: bold;
+        }
+        .date {
+            font-style: italic;
+            color: #555;
+        }
+
+
+       
+    body {
+        font-family: 'Arial', sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+    }
+
+    header {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 1em;
+    }
+
+    main {
+        padding: 20px;
+    }
+
+    footer {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 1em;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }
+
+    #reviews {
+        max-width: 600px;
+        margin: 0 auto;
+        background-color: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+        color: #333;
+        text-align: center;
+    }
+
+    h3 {
+        color: #333;
+    }
+
+    label {
+        display: block;
+        margin: 10px 0 5px;
+        color: #333;
+    }
+
+    input,
+    textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        box-sizing: border-box;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+    button {
+        background-color: #333;
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    .review {
+        border: 1px solid #ccc;
+        margin-bottom: 15px;
+        padding: 10px;
+        border-radius: 8px;
+        background-color: #fff;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .reviewer {
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+
+    .date {
+        font-style: italic;
+        color: #555;
+        margin-bottom: 5px;
+    }
+
+    .content {
+        margin-bottom: 0;
+    }
+
+
+    body {
+        font-family: 'Arial', sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #817f7f;
+    }
+
+    header {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 1em;
+    }
+
+    main {
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    footer {
+        background-color: #333;
+        color: rgb(192, 130, 130);
+        text-align: center;
+        padding: 1em;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }
+
+    #reviews {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    h2 {
+        color: #333;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    h3 {
+        color: #333;
+        margin-bottom: 10px;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 5px;
+        color: #3d3636;
+    }
+
+    input,
+    textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        box-sizing: border-box;
+        border: 1px solid #965656;
+        border-radius: 4px;
+    }
+
+    button {
+        background-color: #433d3d;
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    .review {
+        border: 1px solid #d4a9a9;
+        margin-bottom: 20px;
+        padding: 20px;
+        border-radius: 8px;
+        background-color: #f9f9f9;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .reviewer {
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    .date {
+        font-style: italic;
+        color: #777;
+        margin-bottom: 10px;
+    }
+
+    .content {
+        margin-bottom: 0;
+        color: #333;
+    }
+</style>
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <!-- Your header content goes here -->
+    </header>
+
+    <main>
+        <section id="reviews">
+            <h2>Customer Reviews</h2>
+            <div id="reviewForm">
+                <h3>Write a Review</h3>
+                <form id="userReviewForm">
+                    <label for="reviewerName">Your Name:</label>
+                    <input type="text" id="reviewerName" name="reviewerName" required>
+
+                    <label for="reviewContent">Your Review:</label>
+                    <textarea id="reviewContent" name="reviewContent" required></textarea>
+
+                    <button type="button" onclick="submitReview()">Submit Review</button>
+                </form>
+            </div>
+            <h2> REVIEWS : </h2>
+            <div id="existingReviews">
+                <!-- Existing reviews will be dynamically added here using JavaScript -->
+            </div>
+        </section>
+
+        <!-- Other sections of your page go here -->
+    </main>
+
+    <footer>
+        <!-- Your footer content goes here -->
+    </footer>
+
+    <script>
+        // Retrieve existing reviews from local storage
+        var existingReviews = JSON.parse(localStorage.getItem("reviews")) || [];
+
+        // Display existing reviews
+        displayReviews(existingReviews);
+
+        function submitReview() {
+            // Get user input
+            var reviewerName = document.getElementById("reviewerName").value;
+            var reviewContent = document.getElementById("reviewContent").value;
+
+            // Create a new review object
+            var newReview = {
+                reviewerName: reviewerName,
+                reviewContent: reviewContent,
+                date: getCurrentDate()
+            };
+
+            // Add the new review to the existing reviews
+            existingReviews.push(newReview);
+
+            // Save the updated reviews to local storage
+            localStorage.setItem("reviews", JSON.stringify(existingReviews));
+
+            // Display the updated reviews
+            displayReviews(existingReviews);
+
+            // Clear the form fields
+            document.getElementById("reviewerName").value = "";
+            document.getElementById("reviewContent").value = "";
+        }
+
+        function displayReviews(reviews) {
+            var reviewsContainer = document.getElementById("existingReviews");
+            reviewsContainer.innerHTML = "";
+
+            reviews.forEach(function(review) {
+                var reviewElement = document.createElement("div");
+                reviewElement.className = "review";
+                reviewElement.innerHTML = `
+                    <p class="reviewer">${review.reviewerName}</p>
+                    <p class="date">${review.date}</p>
+                    <p class="content">${review.reviewContent}</p>
+                `;
+                reviewsContainer.appendChild(reviewElement);
+            });
+        }
+
+        function getCurrentDate() {
+            var currentDate = new Date();
+            return currentDate.toDateString();
+        }
+    </script>
+</body>
+</html>

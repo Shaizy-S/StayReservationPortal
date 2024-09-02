@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    /* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Global styles */
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to left, #ffcccc, #d4ebf2);
+  font-size: 16px;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Heading styles */
+.heading {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Hotel styles */
+.hotel {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  border: 2px solid black;
+  padding: 20px;
+  background-color: #fff;
+}
+
+.hotel img {
+  width: 300px;
+  height: auto;
+  margin-right: 20px;
+  object-fit: cover;
+}
+
+.hotel-description {
+  flex: 1;
+}
+
+/* Hotel name styles */
+.hotel-name {
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: #333;
+}
+
+/* Location styles */
+.location {
+  font-size: 1rem;
+  color: #666;
+  margin-top: 10px;
+}
+
+/* Description styles */
+.description {
+  font-size: 1rem;
+  color: #333;
+  margin-top: 10px;
+}
+
+/* View details button styles */
+.view-details-button {
+  background-color: #244572;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 10px;
+}
+
+.view-details-link {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+/* View details button styles */
+.view-details-button {
+  background-color: #244572;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 10px;
+  transition: background-color 0.3s ease; /* Adding a smooth transition effect */
+}
+
+.view-details-button:hover {
+  background-color: #44b4d5; 
+}
+
+.view-details-link {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+
+  </style>
+  <title>Hotels in Pune</title>
+</head>
+<body>
+<div class="container">
+  <h1 class="heading">Hotels in Pune</h1>
+  <div class="hotel">
+    <img src="https://cdn1.goibibo.com/voy_ing/t_g/886765ba537711e7a122025f77df004f.jpg" alt="Hotel 1">
+    <div class="hotel-description">
+      <h2><a href="#" class="hotel-name">Hotel Kalasagar</a></h2>
+      <p class="location">
+        Pimpri<br>
+        11.4 Km From City Centre<br>
+        &#8377; 2770 per room per night
+      </p>
+      <p class="description">
+        Travel Sustainable Level 2<br>
+        Hotel Kalasgar offers 4-star accommodation in Pune and has a Restaurant and Coffee Shop.
+      </p>
+      <button class="view-details-button"><a href="#" class="view-details-link">View Details</a></button>
+    </div>
+  </div>
+
+  <div class="hotel">
+    <img src="https://cdn1.goibibo.com/voy_ing/t_g/54cacd86-706a-4d49-8766-d0166e7c0990.jpeg" alt="Hotel 2">
+    <div class="hotel-description">
+      <h2><a href="#" class="hotel-name">Royal Nest in Amanora Park Town</a></h2>
+      <p class="location">
+        Hadapsar<br>
+        Room In Apartment<br>
+        1 Bedroom | Sleeps 2 guests<br>
+        &#8377; 2395 per room per night
+      </p>
+      <p class="description">
+        Travel Sustainable Level 1<br>
+        Royal Nest in Amanora Park Town is a reasonable option for travelers looking out for an apartment in Pune. It is located in Hadapsar.
+      </p>
+      <button class="view-details-button"><a href="#" class="view-details-link">View Details</a></button>
+    </div>
+  </div>
+
+  <div class="hotel">
+    <img src="https://r2imghtlak.ibcdn.com/r2-mmt-htl-image/htl-imgs/201112121717471744-a138dc54ceab11e78d120a9df65c8753.jpg?output-quality=75&downsize=328:180&output-format=webp" alt="Hotel 3">
+    <div class="hotel-description">
+      <h2><a href="#" class="hotel-name">Keys Select by Lemon Tree Hotels, Pimpri, Pune</a></h2>
+      <p class="location">
+        Pimpri<br>
+        14.2 Km From City Centre<br>
+        &#8377; 1790 per room per night
+      </p>
+      <p class="description">
+        The Hotel has 222 rooms which include 75 suites. We have different categories of rooms which are: Keys Rooms, Indulge Rooms, Studio Apartments, One Bedroom Apartments.
+      </p>
+      <button class="view-details-button"><a href="#" class="view-details-link">View Details</a></button>
+    </div>
+  </div>
+
+  <div class="hotel">
+    <img src="https://r1imghtlak.ibcdn.com/b6e03986c7f611ed8c560a58a9feac02.jpeg?output-quality=75&downsize=328:180&output-format=webp" alt="Hotel 4">
+    <div class="hotel-description">
+      <h2><a href="#" class="hotel-name">Serenity By Monarch, Viman Nagar.</a></h2>
+      <p class="location">
+        7.7 km from University of Pune<br>
+        &#8377; 2319 per room per night
+      </p>
+      <p class="description">
+        Situated in Méribel Village, Serenity By Monarch, Baner Pune features 3-star accommodation with private balconies. This 3-star hotel offers room service and a 24-hour front desk.
+      </p>
+      <button class="view-details-button"><a href="#" class="view-details-link">View Details</a></button>
+    </div>
+  </div>
+</div>
+</body>
+</html>

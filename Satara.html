@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  /* Reset CSS */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  /* Global styles */
+  body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to left, #ffcccc, #d4ebf2);
+    font-size: 16px;
+  }
+  .filter {
+      background-color: #fff;
+      border: 2px solid black;
+      padding: 10px;
+      margin-bottom: 20px;
+    }
+
+    /* Style for the label and select elements within the filter container */
+    .filter label {
+      font-weight: bold;
+    }
+
+    .filter select {
+      width: 100px;
+      padding: 5px;
+    }
+
+    /* Style for the Apply Filters button */
+    .filter button {
+      background-color: #244572;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+
+    .filter button:hover {
+      background-color: #44b4d5;
+    }
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  /* Heading styles */
+  .heading {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  /* Hotel styles */
+  .hotel {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    border: 2px solid black;
+    padding: 20px;
+    background-color: #fff;
+  }
+
+  .hotel img {
+    width: 300px;
+    height: auto;
+    margin-right: 20px;
+    object-fit: cover;
+  }
+
+  .hotel-description {
+    flex: 1;
+  }
+
+  /* Hotel name styles */
+  .hotel-name {
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: #333;
+  }
+
+  /* Location styles */
+  .location {
+    font-size: 1rem;
+    color: #666;
+    margin-top: 10px;
+  }
+
+  /* Description styles */
+  .description {
+    font-size: 1rem;
+    color: #333;
+    margin-top: 10px;
+  }
+
+  /* View details button styles */
+  .view-details-button {
+    background-color: #244572;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+  }
+
+  .view-details-button:hover {
+    background-color: #44b4d5;
+  }
+
+  .view-details-link {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+</style>
+<title>Hotels in Satara</title>
+</head>
+<body>
+<div class="container">
+  <h1 class="heading">Hotels in Satara</h1>
+  <div class="filter">
+    <h2>Price Range Filter</h2>
+    <label for="priceRange">Select Price Range:</label>
+    <select id="priceRange">
+      <option value="all">All</option>
+      <option value="2000-3000">2000 - 3000</option>
+      <option value="3000-4000">3000 - 4000</option>
+      <option value="4000-10000">4000 - 10000</option>
+
+    </select>
+    <button id="filterButton">Apply Filters</button>
+  </div>
+  <div class="hotel" data-price="9676">
+    <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/08/46/de/f6/ramsukh-resorts-spa.jpg?w=900&h=-1&s=1" alt="Hotel 1">
+    <div class="hotel-description">
+      <h2><a href="ramsukhh.html" class="hotel-name">Ramsukh Resorts</a></h2>
+      <p class="location">
+        Mahabali RoadSatara <br>
+        2km Km From City Centre<br>
+        Rs. 9,676 per room per night
+      </p>
+      <p class="description">
+        Want to get away from the din and the crowds? Wish to escape the stressful urban life?Pack your bags and drive down to Ramsukh Resorts and Spa, . Take the much-deserved break, in style.
+      </p> <br>
+      <button class="view-details-button"><a href="ramsukhh.html" class="view-details-link">View Details</a></button>
+    </div>
+  </div>
+
+  <div class="hotel" data-price="2615">
+    <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/06/ce/2d/a2/krishna-continental.jpg?w=900&h=-1&s=1">
+    <div class="hotel-description">
+      <h2><a href="krishna conti.html" class="hotel-name">Krishna Continental</a></h2>
+      <p class="location">
+        <br>
+        Rs. 2,615 Rs 1 room per night
+      </p>
+      <p class="description">
+        Travel Sustainable Level 1<br>
+        Every room has a private balcony to relax and enjoy some fresh air. All fittings in the rooms are of the highest quality to ensure a comfortable stay. With the most spacious rooms.
+      </p> <br>
+      <button class="view-details-button"><a href="krishna conti.html" class="view-details-link">View Details</a></button>
+    </div>
+  </div>
+
+  <div class="hotel" data-price="5410">
+    <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/24/ed/e9/d0/caption.jpg?w=900&h=-1&s=1" alt="Hotel 3">
+    <div class="hotel-description">
+      <h2><a href="fern residency.html" class="hotel-name">The Fern Residency </a></h2>
+      <p class="location">
+        Survey No. 40/2/1, Plot No. 1 & 2, Godoli, Pune ,Banglore Highway,, Satara<br>
+        
+         Rs. 5,410 per room per night
+      </p>
+      <p class="description">
+        Travel Sustainable Level 1<br>
+        The Fern Residency - Satara is a 60-room hotel offering contemporary accommodations, a finely-designed multi cuisine restaurant & a roof top lounge & bar, along with banquet venues & a gymnasium.
+      </p> <br>
+      <button class="view-details-button"><a href="fern residency.html" class="view-details-link">View Details</a></button>
+    </div>
+  </div>
+
+  <div class="hotel" data-price="3418">
+    <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/fa/24/f1/treebo-trend-city-inn.jpg?w=900&h=-1&s=1" alt="Hotel 4">
+    <div class="hotel-description">
+        
+      <h2><a href="treebo city.html" class="hotel-name">Treebo Trend City Inn</a></h2>
+      <p class="location">
+        Radhika Road, Reliance Trends Mall, Satara <br>
+        Travel Sustainable Level 2 <br>
+      Rs. 3,418 per room per night
+      </p>
+      <p> 
+        Treebo City Inn is the perfect pick for you Located on the busy Radhika Road, this modern-style property suitable for corporates, families, young singles, couples, and foreigners. The hotel allows unmarried couples as well. The property has an inventory of 12 well-maintained Maple rooms which are spread over 4 floors. Guests can also enjoy Treebo’s signature complimentary breakfast, WiFi and branded toiletries.
+
+      </p> <br>
+      <button class="view-details-button"><a href="treebo city.html" class="view-details-link">View Details</a></button>
+    </div>
+  </div>
+</div>
+<script>
+  const priceRangeSelect = document.getElementById('priceRange');
+  const filterButton = document.getElementById('filterButton');
+  const hotels = document.querySelectorAll('.hotel');
+
+  filterButton.addEventListener('click', applyFilters);
+
+  function applyFilters() {
+    const selectedPriceRange = priceRangeSelect.value;
+
+    hotels.forEach((hotel) => {
+      const price = parseInt(hotel.getAttribute('data-price'));
+
+      if (selectedPriceRange === 'all' || (price >= parseInt(selectedPriceRange.split('-')[0]) && price <= parseInt(selectedPriceRange.split('-')[1]))) {
+        hotel.style.display = 'flex';
+      } else {
+        hotel.style.display = 'none';
+      }
+    });
+  }
+</script>
+</body>
+</html>

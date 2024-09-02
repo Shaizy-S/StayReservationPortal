@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  /* Reset CSS */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  /* Global styles */
+  body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to left, #ffcccc, #d4ebf2);
+    font-size: 16px;
+  }
+  .filter {
+      background-color: #fff;
+      border: 2px solid black;
+      padding: 10px;
+      margin-bottom: 20px;
+    }
+
+    /* Style for the label and select elements within the filter container */
+    .filter label {
+      font-weight: bold;
+    }
+
+    .filter select {
+      width: 100px;
+      padding: 5px;
+    }
+
+    /* Style for the Apply Filters button */
+    .filter button {
+      background-color: #244572;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+
+    .filter button:hover {
+      background-color: #44b4d5;
+    }
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  /* Heading styles */
+  .heading {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  /* Hotel styles */
+  .hotel {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    border: 2px solid black;
+    padding: 20px;
+    background-color: #fff;
+  }
+
+  .hotel img {
+    width: 300px;
+    height: auto;
+    margin-right: 20px;
+    object-fit: cover;
+  }
+
+  .hotel-description {
+    flex: 1;
+  }
+
+  /* Hotel name styles */
+  .hotel-name {
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: #333;
+  }
+
+  /* Location styles */
+  .location {
+    font-size: 1rem;
+    color: #666;
+    margin-top: 10px;
+  }
+
+  /* Description styles */
+  .description {
+    font-size: 1rem;
+    color: #333;
+    margin-top: 10px;
+  }
+
+  /* View details button styles */
+  .view-details-button {
+    background-color: #244572;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+  }
+
+  .view-details-button:hover {
+    background-color: #44b4d5;
+  }
+
+  .view-details-link {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+</style>
+<title>Hotels in Shirdi</title>
+</head>
+<body>
+<div class="container">
+  <h1 class="heading">Hotels in Shirdi</h1>
+  <div class="filter">
+    <h2>Price Range Filter</h2>
+    <label for="priceRange">Select Price Range:</label>
+    <select id="priceRange">
+      <option value="all">All</option>
+      <option value="3000-4000">3000 - 4000</option>
+      <option value="4000-6000">4000 - 6000</option>
+
+    </select>
+    <button id="filterButton">Apply Filters</button>
+  </div>
+  <div class="hotel" data-price="3976">
+    <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/28/e4/3c/aa/front.jpg?w=900&h=-1&s=1" alt="Hotel 1">
+    <div class="hotel-description">
+      <h2><a href="Aluakik Hotel.html" class="hotel-name">Alaukik Hotel</a></h2>
+      <p class="location">
+        New Pimpalwadi Road Bayjabai Kote Marg, Survey Number - 5/24, Shirdi <br>
+       
+        Rs. 3,976 per room per night
+      </p>
+      <p class="description">
+        Alaukik Hotel is a distinct addition to Shirdi and a smart choice for travelers. Whether you are traveling for business or pleasure, get the most out of your trip with a stay at Alaukik Hotel.
+      </p> <br>
+      <button class="view-details-button"><a href="Aluakik Hotel.html" class="view-details-link">View Details</a></button>
+    </div>
+  </div>
+
+  <div class="hotel" data-price="5615">
+    <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/02/74/3f/a1/hotel-exterior.jpg?w=900&h=-1&s=1">
+    <div class="hotel-description">
+      <h2><a href="Sunnsand shirdi.html" class="hotel-name">
+        Sun-n-Sand Shirdi</a></h2>
+      <p class="location">Shiv Road Nighoj Village, Shirdi 
+        <br>
+        Rs. 5,615 Rs 1 room per night
+      </p>
+      <p class="description">
+        Travel Sustainable Level 1<br>
+        Welcome to Shirdi, where history and spirituality blend seamlessly to offer an unforgettable experience. Sun-n-Sand, Shirdi’s premiere five star hotel is situated at just 5 minutes walk from the Saibaba Temple and is conveniently located, one km away from the railway station. The hotel, built on a five acre plot with beautiful landscaped gardens boasts of new richly renovated 100 guestrooms and 20 serviced apartments. Maintaining the sanctity of the pious city, this five star hotel offers strictly vegetarian fare and has a no alcohol policy.
+      </p> <br>
+      <button class="view-details-button"><a href="Sunnsand shirdi.html" class="view-details-link">View Details</a></button>
+    </div>
+  </div>
+
+  <div class="hotel" data-price="3410">
+    <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/05/77/08/0a/getlstd-property-photo.jpg?w=900&h=-1&s=1" alt="Hotel 3">
+    <div class="hotel-description">
+      <h2><a href="St Laurn.html" class="hotel-name">St Laurn </a></h2>
+      <p class="location">
+        S. No. 5/19, Rui- Shiv Road, Shirdi <br>
+        
+         Rs. 3,410 per room per night
+      </p>
+      <p class="description">
+        Travel Sustainable Level 1<br>
+        The Fern Residency - Satara is a 60-room hotel offering contemporary accommodations, a finely-designed multi cuisine restaurant & a roof top lounge & bar, along with banquet venues & a gymnasium.
+      </p> <br>
+      <button class="view-details-button"><a href="St Laurn.html" class="view-details-link">View Details</a></button>
+    </div>
+  </div>
+
+  <div class="hotel" data-price="3543">
+    <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/14/0b/39/b8/keys-prima-hotel-temple.jpg?w=900&h=-1&s=1" alt="Hotel 4">
+    <div class="hotel-description">
+        
+      <h2><a href="hotel temple tree.html" class="hotel-name">Hotel Temple Tree</a></h2>
+      <p class="location">
+        Plot No. 01, Ring Road Behind Sai Ashram (1000 Rooms), Shirdi<br>
+        Travel Sustainable Level 2 <br>
+      Rs. 3,543 per room per night
+      </p>
+      
+        
+Travellers' Choice
+Travellers Choice 2022. Award winning 87 room luxury Hotel Temple Tree offers picturesque views of the adjoining lush green fields. Our hotel provides upscale accommodations with world class services and warm award-winning hospitality. Stay with us and enjoy a luxurious well-appointed guest room or suite along with a Multi-Cuisine restaurant, entertainment lounge, swimming pool, lawn and a conference hall. Toddler-friendly Play Zone. Sai Mandir in premises. With all Covid-19 safety precautions
+
+      </p> <br>
+      <button class="view-details-button"><a href="hotel temple tree.html" class="view-details-link">View Details</a></button>
+    </div>
+  </div>
+</div>
+<script>
+  const priceRangeSelect = document.getElementById('priceRange');
+  const filterButton = document.getElementById('filterButton');
+  const hotels = document.querySelectorAll('.hotel');
+
+  filterButton.addEventListener('click', applyFilters);
+
+  function applyFilters() {
+    const selectedPriceRange = priceRangeSelect.value;
+
+    hotels.forEach((hotel) => {
+      const price = parseInt(hotel.getAttribute('data-price'));
+
+      if (selectedPriceRange === 'all' || (price >= parseInt(selectedPriceRange.split('-')[0]) && price <= parseInt(selectedPriceRange.split('-')[1]))) {
+        hotel.style.display = 'flex';
+      } else {
+        hotel.style.display = 'none';
+      }
+    });
+  }
+</script>
+</body>
+</html>

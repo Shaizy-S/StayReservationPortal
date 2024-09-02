@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  /* Reset CSS */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  /* Global styles */
+  body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to left, #ffcccc, #d4ebf2);
+    font-size: 16px;
+  }
+  .filter {
+      background-color: #fff;
+      border: 2px solid black;
+      padding: 10px;
+      margin-bottom: 20px;
+    }
+
+    /* Style for the label and select elements within the filter container */
+    .filter label {
+      font-weight: bold;
+    }
+
+    .filter select {
+      width: 100px;
+      padding: 5px;
+    }
+
+    /* Style for the Apply Filters button */
+    .filter button {
+      background-color: #244572;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+
+    .filter button:hover {
+      background-color: #44b4d5;
+    }
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  /* Heading styles */
+  .heading {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  /* Hotel styles */
+  .hotel {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    border: 2px solid black;
+    padding: 20px;
+    background-color: #fff;
+  }
+
+  .hotel img {
+    width: 300px;
+    height: 200px; /* Adjusted height to match the other images */
+    margin-right: 20px;
+    object-fit: cover;
+  }
+
+  .hotel-description {
+    flex: 1;
+  }
+
+  /* Hotel name styles */
+  .hotel-name {
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: #333;
+  }
+
+  /* Location styles */
+  .location {
+    font-size: 1rem;
+    color: #666;
+    margin-top: 10px;
+  }
+
+  /* Description styles */
+  .description {
+    font-size: 1rem;
+    color: #333;
+    margin-top: 10px;
+  }
+
+  /* View details button styles */
+  .view-details-button {
+    background-color: #244572;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+  }
+
+  .view-details-button:hover {
+    background-color: #44b4d5;
+  }
+
+  .view-details-link {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+</style>
+<title>Hotels in Solapur</title>
+</head>
+<body>
+<div class="container">
+  <h1 class="heading">Hotels in Solapur</h1>
+  <div class="filter">
+    <h2>Price Range Filter</h2>
+    <label for="priceRange">Select Price Range:</label>
+    <select id="priceRange">
+      <option value="all">All</option>
+      <option value="2000-4000">2000 - 4000</option>
+      <option value="4000-7000">4000 - 7000</option>
+
+    </select>
+    <button id="filterButton">Apply Filters</button>
+  </div>
+  <div class="hotel" data-price="6976">
+    <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/26/66/37/2a/balaji-sarovar-premier.jpg?w=900&h=-1&s=1" alt="Hotel 1">
+    <div class="hotel-description">
+      <h2><a href="Balaji.html" class="hotel-name">Balaji Sarovar Premiere</a></h2>
+      <p class="location">
+        Hotgi Road, Solapur  <br>
+        Rs. 6,976 per room per night
+      </p>
+      <p class="description">
+        The hotel offers an optimum blend of comfort, efficient services, and convenience for business travelers. Each room is complete with luxurious beds, premium furnishings, a carefully stocked mini-bar, electronic safe, Wi-Fi connectivity, and other modern in-room amenities & services including LCD TV with Satellite channels, in-room tea/coffee maker, in-room iron with ironing board, 24-hour room service, and a business center. Guests will have the opportunity to unwind.
+      </p>
+      <button class="view-details-button"><a href="Balaji.html" class="view-details-link">View Details</a></button>
+    </div>
+  </div>
+
+  <div class="hotel" data-price="3415">
+    <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/2e/9f/30/facade-exterior.jpg?w=900&h=-1&s=1" alt="Hotel 2">
+    <div class="hotel-description">
+      <h2><a href="kyriad.html" class="hotel-name">Kyriad Hotel</a></h2>
+      <p class="location">
+        Old Pune Naka VIP Road, Opposite Bank of Maharashtra, Solapur<br>
+        Rs. 3,415 Rs 1 room per night
+      </p>
+      <p class="description">
+        Travel Sustainable Level 1<br>
+        The hotel with its 43 smartly furnished rooms offers you accommodation options of Deluxe Rooms, Premier Rooms & Suites. Enjoy the lavishly spread vegetarian buffet breakfast at our multi-cuisine restaurant TANGELO. Unwind in comfort and quirkiness of the hotel's 2 F&B outlets and conference facilities. The hotel has something to offer for all.
+      </p>
+      <button class="view-details-button"><a href="kyriad.html" class="view-details-link">View Details</a></button>
+    </div>
+  </div>
+
+  <div class="hotel" data-price="3210">
+    <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/06/6f/48/7f/hotel-center-point-solapur.jpg?w=900&h=-1&s=1" alt="Hotel 3">
+    <div class="hotel-description">
+      <h2><a href="hotel center.html" class="hotel-name">Hotel Center Point</a></h2>
+      <p class="location">
+        Saat Rasta, Opposite Big Bazar, Solapur<br>
+        Rs. 3,210 per room per night
+      </p>
+      <p class="description">
+        Travel Sustainable Level 1<br>
+        Hotel Center Point is located in the heart of the city and just 1 km away from the railway station. Providing quality service at affordable rates to our esteemed customers and attending to their requirements and needs. This is achieved through carrying out a constant review and upgrade of the facilities offered at our hotel. Our motto is to ensure the delivery of complete customer satisfaction.
+      </p>
+      <button class="view-details-button"><a href="hotel center.html" class="view-details-link">View Details</a></button>
+    </div>
+  </div>
+
+  <div class="hotel" data-price="3246">
+    <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/12/06/81/f9/photo1jpg.jpg?w=900&h=-1&s=1" alt="Hotel 4">
+    <div class="hotel-description">
+      <h2><a href="hotel pratahm.html" class="hotel-name">Hotel Pratham</a></h2>
+      <p class="location">
+        South Sadar Bazar, Solapur<br>
+        Travel Sustainable Level 2<br>
+        Rs. 3,246 per room per night
+      </p>
+      <p class="description">
+        Hotel Pratham has a well-established legacy in the hospitality industry since 1991. It is the finest and longest continuously operating star hotel in the Solapur region. We have always strived to serve our guests with the most comfortable and pleasant stay. In an effort to better serve our guests, some exciting happiness with a considerate renovation and property modernization has been completed. Your stay is now enhanced with better rooms, lobby areas, restaurant
+    </p>
+    <button class="view-details-button"><a href="hotel pratahm.html" class="view-details-link">View Details</a></button>
+  </div>
+  </div>
+  <script>
+    const priceRangeSelect = document.getElementById('priceRange');
+    const filterButton = document.getElementById('filterButton');
+    const hotels = document.querySelectorAll('.hotel');
+  
+    filterButton.addEventListener('click', applyFilters);
+  
+    function applyFilters() {
+      const selectedPriceRange = priceRangeSelect.value;
+  
+      hotels.forEach((hotel) => {
+        const price = parseInt(hotel.getAttribute('data-price'));
+  
+        if (selectedPriceRange === 'all' || (price >= parseInt(selectedPriceRange.split('-')[0]) && price <= parseInt(selectedPriceRange.split('-')[1]))) {
+          hotel.style.display = 'flex';
+        } else {
+          hotel.style.display = 'none';
+        }
+      });
+    }
+  </script>
+  </body>
+  </html>
