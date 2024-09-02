@@ -1,0 +1,88 @@
+
+
+#menu {
+    position: fixed;
+    width: 40%;
+    line-height: 60px;
+    height: 35px;
+}
+
+#menu-toggle {
+    margin-left: 10px;
+    padding: 3px 9px;
+    size: 50px;
+}
+
+#menu-list {
+    width: 250px;
+    height: 100px;
+    padding: 0;
+    margin: 0;
+}
+
+#menu-list a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+
+#menu-list.active {
+    animation: slide-in 0.3s ease-in-out;
+}
+
+#menu-list:not(.active) {
+    animation: slide-out 0.3s ease-in-out forwards;
+}
+
+@keyframes slide-in {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+@keyframes slide-out {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+#menu-list li {
+    padding-left: 20px;
+    border: 1px solid rgb(38, 22, 222);
+
+}
+/* Add the following styles to your existing CSS */
+
+/* Navigation bar background */
+.sb {
+    background-color: transparent;
+    padding: 10px;
+}
+
+/* Navigation bar button */
+#menu-toggle {
+    background-color: transparent;
+    border: none;
+    color: #2716e0;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* List items in the navigation menu */
+#menu-list li {
+    margin-bottom: 10px;
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+#menu-list li a {
+    text-decoration: none;
+    color: #111010;
+}
+
+#menu-list li a:hover {
+    color: #2716e0; /* Change color on hover */
+}

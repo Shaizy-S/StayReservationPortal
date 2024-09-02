@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  /* Reset CSS */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  /* Global styles */
+  body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to left, #ffcccc, #d4ebf2);
+    font-size: 16px;
+  }
+  .filter {
+      background-color: #fff;
+      border: 2px solid black;
+      padding: 10px;
+      margin-bottom: 20px;
+    }
+
+    /* Style for the label and select elements within the filter container */
+    .filter label {
+      font-weight: bold;
+    }
+
+    .filter select {
+      width: 100px;
+      padding: 5px;
+    }
+
+    /* Style for the Apply Filters button */
+    .filter button {
+      background-color: #244572;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+
+    .filter button:hover {
+      background-color: #44b4d5;
+    }
+
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  /* Heading styles */
+  .heading {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  /* Hotel styles */
+  .hotel {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    border: 2px solid black;
+    padding: 20px;
+    background-color: #fff;
+  }
+
+  .hotel img {
+    width: 300px;
+    height: auto;
+    margin-right: 20px;
+    object-fit: cover;
+  }
+
+  .hotel-description {
+    flex: 1;
+  }
+
+  /* Hotel name styles */
+  .hotel-name {
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: #333;
+  }
+
+  /* Location styles */
+  .location {
+    font-size: 1rem;
+    color: #666;
+    margin-top: 10px;
+  }
+
+  /* Description styles */
+  .description {
+    font-size: 1rem;
+    color: #333;
+    margin-top: 10px;
+  }
+
+  /* View details button styles */
+  .view-details-button {
+    background-color: #244572;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+  }
+
+  .view-details-button:hover {
+    background-color: #44b4d5;
+  }
+
+  .view-details-link {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+</style>
+<title>Hotels in Alibaug</title>
+
+</head>
+<body>
+ 
+<div class="container">
+  <h1 class="heading">Hotels in Alibaug</h1>
+  <div class="filter">
+    <h2>Price Range Filter</h2>
+    <label for="priceRange">Select Price Range:</label>
+    <select id="priceRange">
+      <option value="all">All</option>
+      <option value="2000-3000">2000 - 3000</option>
+      <option value="3000-4000">3000 - 4000</option>
+
+    </select>
+    <button id="filterButton">Apply Filters</button>
+  </div>
+  <div class="hotel" data-price="13000">
+    <img src="https://pix8.agoda.net/hotelImages/488/488323/488323_14030719360018605000.jpg?ca=2&ce=1&s=1024x768" alt="Hotel 1">
+    <div class="hotel-description">
+      <h2><a href="Tropican resort.html" class="hotel-name">Tropicana Resort </a></h2>
+      <p class="location">
+        Sogaon,Alibaug <br>
+        15 minutes away from Railways Station
+    1.5 km from  the Beach <br>
+        Rs. 13,000 per room per night
+      </p>
+      <p class="description">
+
+        Travel Sustainable Level 2<br>
+        A Business cum leisure resort with its own distinctive character; The Tropicana is a unique way to experience one of India’s most vibrant and exotic destinations.
+      </p> <br>
+      <button class="view-details-button"><a href="Tropican resort.html" class="view-details-link">View Details</a></button>
+    </div>
+  </div>
+
+  <div class="hotel" data-price="2196">
+    <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0f/b7/a2/83/acons-palm-beach.jpg?w=1200&h=-1&s=1" alt="Hotel 2">
+    <div class="hotel-description">
+      <h2><a href="Acons Palm Beach.html" class="hotel-name">Acons Palm Beach</a></h2>
+      <p class="location">
+        Gondhalpada, Alibaug
+         Rs. 2,196 1 room per night
+      </p>
+      <p class="description">
+        Travel Sustainable Level 1<br>
+        Acons Palm Beach gives you the comfort of your own holiday home. Get your own spacious apartment at the price of a Hotel with 24 hour service. Our apartment hotel offers you a perfect get-away to relax and rejuvenate. Location: Just a km away from Alibag-Pen Road and 1 minute drive from the Radisson Blu Resort And Spa <br></p>
+      <button class="view-details-button"><a href="Acons Palm Beach.html" class="view-details-link">View Details</a></button>
+    </div>
+  </div>
+
+  <div class="hotel" data-price="3089">
+    <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/12/af/32/7f/lobby-area.jpg?w=1100&h=-1&s=1" alt="Hotel 3">
+    <div class="hotel-description">
+      <h2><a href="Hotel Nirvana.html" class="hotel-name">Hotel Nirvana</a></h2>
+      <p class="location">
+        Gharat Ali, Sribag St Stand road,Alibaug<br>
+        12 Km From City Centre <br>
+      Rs. 3,089 per room per night
+      </p>
+      <p class="description">
+        Travel Sustainable Level 1<br>
+        We are extremely delighted to welcome you to our “Hotel Nirvana”, conveniently located in the heart of the Alibaug town. Our guests come to Alibaug to unwind and have fun at the beach and they expect a comfortable place to rest and relax.</p> <br>
+      <button class="view-details-button"><a href="Hotel Nirvana.html" class="view-details-link">View Details</a></button>
+    </div>
+  </div>
+
+  <div class="hotel" data-price="3200">
+    <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/21/68/e5/cd/berryl-resorts.jpg?w=1200&h=-1&s=" alt="Hotel 4">
+    <div class="hotel-description">
+      <h2><a href="Berryl Resort.html" class="hotel-name">Berryl Resort</a></h2>
+      <p class="location">
+        Alibaug Roha Road, Alibaug<br>
+        Travel Sustainable Level 2 <br>
+        Airport-Mumbai Airport 1hr and 48 mins away <br>
+       Rs. 3,200 per room per night
+      </p>
+      <p class="description">
+        Berryl Resorts is a Resort in Alibag. Staff on site can arrange airport transfers. At the hotel, each room is equipped with a balcony. The rooms are fitted with a private bathroom with free toiletries. Mumbai is 102 km from Berryl Resorts. Chhatrapati Shivaji International Mumbai Airport is 113 km from the property. We speak your language! Berryl Resort provides accommodation with an outdoor swimming pool, free private parking, a fitness centre and a garden.
+      </p> <br>
+      <button class="view-details-button"><a href="Berryl Resort.html" class="view-details-link">View Details</a></button>
+    </div>
+  </div>
+</div>
+<script>
+  const priceRangeSelect = document.getElementById('priceRange');
+  const filterButton = document.getElementById('filterButton');
+  const hotels = document.querySelectorAll('.hotel');
+
+  filterButton.addEventListener('click', applyFilters);
+
+  function applyFilters() {
+    const selectedPriceRange = priceRangeSelect.value;
+
+    hotels.forEach((hotel) => {
+      const price = parseInt(hotel.getAttribute('data-price'));
+
+      if (selectedPriceRange === 'all' || (price >= parseInt(selectedPriceRange.split('-')[0]) && price <= parseInt(selectedPriceRange.split('-')[1]))) {
+        hotel.style.display = 'flex';
+      } else {
+        hotel.style.display = 'none';
+      }
+    });
+  }
+</script>
+</body>
+</html>

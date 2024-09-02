@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    /* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Global styles */S
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to left, #ffcccc, #d4ebf2);
+  font-size: 16px;
+}
+.filter {
+      background-color: #fff;
+      border: 2px solid black;
+      padding: 10px;
+      margin-bottom: 20px;
+    }
+
+    /* Style for the label and select elements within the filter container */
+    .filter label {
+      font-weight: bold;
+    }
+
+    .filter select {
+      width: 100px;
+      padding: 5px;
+    }
+
+    /* Style for the Apply Filters button */
+    .filter button {
+      background-color: #244572;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+
+    .filter button:hover {
+      background-color: #44b4d5;
+    }
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Heading styles */
+.heading {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Hotel styles */
+.hotel {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  border: 2px solid black;
+  padding: 20px;
+  background-color: #fff;
+}
+
+.hotel img {
+  width: 300px;
+  height: auto;
+  margin-right: 20px;
+  object-fit: cover;
+}
+
+.hotel-description {
+  flex: 1;
+}
+
+/* Hotel name styles */
+.hotel-name {
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: #333;
+}
+
+/* Location styles */
+.location {
+  font-size: 1rem;
+  color: #666;
+  margin-top: 10px;
+}
+
+/* Description styles */
+.description {
+  font-size: 1rem;
+  color: #333;
+  margin-top: 10px;
+}
+
+/* View details button styles */
+.view-details-button {
+  background-color: #244572;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 10px;
+}
+
+.view-details-link {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+/* View details button styles */
+.view-details-button {
+  background-color: #244572;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 10px;
+  transition: background-color 0.3s ease; /* Adding a smooth transition effect */
+}
+
+.view-details-button:hover {
+  background-color: #44b4d5; 
+}
+
+.view-details-link {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+
+  </style>
+  <title>Hotels in Aurangabad</title>
+</head>
+<body>
+<div class="container">
+  <h1 class="heading">Hotels in Aurangabad </h1>
+  <div class="filter">
+    <h2>Price Range Filter</h2>
+    <label for="priceRange">Select Price Range:</label>
+    <select id="priceRange">
+      <option value="all">All</option>
+      <option value="2000-3000">2000 - 3000</option>
+      <option value="3000-4000">3000 - 4000</option>
+      <option value="4000-10000">4000 - 10000</option>
+
+    </select>
+    <button id="filterButton">Apply Filters</button>
+  </div>
+  <div class="hotel" data-price="3119">
+    <img src="https://lh3.googleusercontent.com/p/AF1QipPYZ47vopitBBcfJQmOkTGL0S1Jvqcw8CqamS_1=w287-h192-n-k-rw-no-v1" alt="Hotel 1">
+    <div class="hotel-description">
+      <h2><a href="VITS.html" class="hotel-name">VITS Aurangabad</a></h2>
+      <p class="location">
+        Railway Staation Road, Aurangabad<br>
+  
+        Rs. 3,119 per room per night <br>
+        Travel Sustainable Level 2
+
+      </p>
+      <p class="description">
+        Travel Sustainable Level 2<br>
+        VITS Aurangabad offers 4-star accommodation in the city and has a Restaurant and Coffee Shop <br>Popular amenities Pool,
+        Spa, Parking free and Breakfast free
+      </p> <br>
+      <button class="view-details-button"><a href="VITS.html" class="view-details-link">View Details</a></button>
+    </div>
+  </div>
+
+  <div class="hotel" data-price="3475">
+    <img src="https://lh3.googleusercontent.com/p/AF1QipOJ_7rGASHbsB3gBNM0fuGlTEUmctPNmTDkHrLe=w287-h192-n-k-rw-no-v1" alt="Hotel 2">
+    <div class="hotel-description">
+      <h2><a href="Ambassador Ajanta Hotel.html" class="hotel-name"> Ambassador Ajanta Hotel</a></h2>
+      <p class="location">
+        Town Center Aurangabad<br>
+        
+       Rs. 3,475 per room per night
+      </p>
+      <p class="description">
+        Travel Sustainable Level 1<br>
+        Ambassador Ajanta Hotel is a modern and stylish hotel located in the heart of town. The hotel offers a variety of amenities, including a rooftop pool, fitness center, and spa.
+      </p> <br>
+      <button class="view-details-button"><a href="Ambassador Ajanta Hotel.html" class="view-details-link">View Details</a></button>
+    </div>
+  </div>
+
+  <div class="hotel" data-price="9345">
+    <img src="https://lh3.googleusercontent.com/p/AF1QipP5ItI4g-0GJgTv-GoJAv24BOEU0DaOUovSrZRg=w287-h192-n-k-rw-no-v1" alt="Hotel 3">
+    <div class="hotel-description">
+      <h2><a href="Rama International.html" class="hotel-name">Rama  International, Aurangabad</a></h2>
+      <p class="location">
+        Nyay Nagar, Aurangabad <br>
+        4.2 Km From City Centre<br>
+        Rs. 9,345 per room per night
+      </p>
+      <p class="description">Travel Sustainable Level 1
+
+        Set on lush grounds, this laid-back hotel is 10 km from Aurangabad Caves, 6 km from Salim Ali Lake, and 7 km from Siddharth Garden and Zoo.
+        
+      </p> <br>
+      <button class="view-details-button"><a href="Rama International.html" class="view-details-link">View Details</a></button>
+    </div>
+  </div>
+
+  <div class="hotel" data-price="2200">
+    <img src="https://lh3.googleusercontent.com/p/AF1QipNOvveJ1si27SkCdj2r2xkH7ssVP5cfpW74KifJ=w287-h192-n-k-rw-no-v1" alt="Hotel 4">
+    <div class="hotel-description">
+      <h2><a href="Hotel Imperial.html" class="hotel-name">Hotel Imperial
+      <p class="location">
+        Western Suburbs, Aurangabad<br>
+        4 km from nearest Airport<br>
+      Rs. 2,200 per room per night
+      </p>
+      <p class="description">
+        Located in Aurangabad, 10 mins for DG Waterpark MAXX VALUE - Hotel Imperial Aurangabad provides 24 hour room service anlso one of the few hotes having Resturants and a seperate Bar and a GYM.
+
+
+      </p> <br>
+      <button class="view-details-button"><a href="Hotel Imperial.html" class="view-details-link">View Details</a></button>
+    </div>
+  </div>
+</div>
+<script>
+  const priceRangeSelect = document.getElementById('priceRange');
+  const filterButton = document.getElementById('filterButton');
+  const hotels = document.querySelectorAll('.hotel');
+
+  filterButton.addEventListener('click', applyFilters);
+
+  function applyFilters() {
+    const selectedPriceRange = priceRangeSelect.value;
+
+    hotels.forEach((hotel) => {
+      const price = parseInt(hotel.getAttribute('data-price'));
+
+      if (selectedPriceRange === 'all' || (price >= parseInt(selectedPriceRange.split('-')[0]) && price <= parseInt(selectedPriceRange.split('-')[1]))) {
+        hotel.style.display = 'flex';
+      } else {
+        hotel.style.display = 'none';
+      }
+    });
+  }
+</script>
+</body>
+</html>

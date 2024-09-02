@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AdventureAvenues.com</title>
+    <link rel="icon" href="file:///D:/VSCode/Logo.jpg" type="image/png">
+<link rel="shortcut icon" href="file:///D:/VSCode/Logo.jpg" type="image/png">
+    <style>
+
+
+body {
+    margin: 0;
+    padding: 0;
+    background: url('BGIMG.jpg') center/cover no-repeat;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Arial', sans-serif;
+    color: white;
+}
+
+#signup-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#signup-form {
+    background-color: rgba(181, 187, 195, 0.9);
+    padding: 40px;
+    border-radius: 12px;
+    text-align: center;
+    width: 400px;
+}
+
+#signup-form h2 {
+    color: #333;
+    font-size: 24px;
+}
+
+#signup-form a {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#signup-form a:hover {
+    text-decoration: underline;
+}
+
+#signup-form h3 {
+    margin-top: 20px;
+    color: #888;
+    font-size: 16px;
+}
+
+#signup-form button {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    margin-top: 20px;
+    cursor: pointer;
+    border-radius: 6px;
+    font-size: 18px;
+}
+
+#signup-form button:hover {
+    background-color: #c0392b;
+}
+
+        /* Add your styling here */
+        #signup-overlay {
+            display: none;
+            /* Additional styling for the overlay */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #signup-form {
+            /* Additional styling for the form */
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+
+        body {
+    margin: 0;
+    padding: 0;
+    background: url('BGIMG.jpg') center/cover no-repeat;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Arial', sans-serif;
+    color: white;
+}
+
+#signup-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#signup-form {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    width: 300px;
+}
+
+#signup-form h2 {
+    color: #333;
+}
+
+#signup-form a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+#signup-form a:hover {
+    text-decoration: underline;
+}
+
+#signup-form h3 {
+    margin-top: 10px;
+    color: #888;
+}
+
+#signup-form button {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+#signup-form button:hover {
+    background-color: #c0392b;
+}
+
+    </style>
+</head>
+<body>
+
+<!-- Your website content goes here -->
+
+<!-- Signup Overlay -->
+<div id="signup-overlay">
+    <div id="signup-form">
+        <!-- Your signup or login form goes here -->
+        <h2>Welcome to Our Website</h2>
+        
+<br>
+        
+        <a href="SignIn.html">Sign In</a><br>
+        <h3>Don't have an account?<a href="Create account.html">Create account</a></h3>
+        <!-- Add your sign-up or login form fields and buttons here -->
+
+        
+    </div>
+</div>
+
+<!-- Add your website content here -->
+
+<script>
+    // Function to display the signup overlay
+    function showSignupOverlay() {
+        document.getElementById('signup-overlay').style.display = 'flex';
+    }
+
+    // Function to close the signup overlay
+    function closeSignupOverlay() {
+        document.getElementById('signup-overlay').style.display = 'none';
+    }
+
+    // Event listener for clicks on the document body
+    document.body.addEventListener('click', function (event) {
+        // Check if the click event did not originate from the "Sign In" or "Create Account" link
+        if (!event.target.matches('.signin-link, .create-account-link')) {
+            showSignupOverlay();
+        }
+    });
+
+    // You can trigger the showSignupOverlay function when the page loads
+    window.onload = showSignupOverlay;
+</script>
+
+</body>
+</html>

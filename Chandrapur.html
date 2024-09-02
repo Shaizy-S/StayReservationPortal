@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    /* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Global styles */
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to left, #ffcccc, #d4ebf2);
+  font-size: 16px;
+}
+.filter {
+      background-color: #fff;
+      border: 2px solid black;
+      padding: 10px;
+      margin-bottom: 20px;
+    }
+
+    /* Style for the label and select elements within the filter container */
+    .filter label {
+      font-weight: bold;
+    }
+
+    .filter select {
+      width: 100px;
+      padding: 5px;
+    }
+
+    /* Style for the Apply Filters button */
+    .filter button {
+      background-color: #244572;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+
+    .filter button:hover {
+      background-color: #44b4d5;
+    }
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Heading styles */
+.heading {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Hotel styles */
+.hotel {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  border: 2px solid black;
+  padding: 20px;
+  background-color: #fff;
+}
+
+.hotel img {
+  width: 300px;
+  height: auto;
+  margin-right: 20px;
+  object-fit: cover;
+}
+
+.hotel-description {
+  flex: 1;
+}
+
+/* Hotel name styles */
+.hotel-name {
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: #333;
+}
+
+/* Location styles */
+.location {
+  font-size: 1rem;
+  color: #666;
+  margin-top: 10px;
+}
+
+/* Description styles */
+.description {
+  font-size: 1rem;
+  color: #333;
+  margin-top: 10px;
+}
+
+/* View details button styles */
+.view-details-button {
+  background-color: #244572;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 10px;
+}
+
+.view-details-link {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+/* View details button styles */
+.view-details-button {
+  background-color: #244572;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 10px;
+  transition: background-color 0.3s ease; /* Adding a smooth transition effect */
+}
+
+.view-details-button:hover {
+  background-color: #44b4d5; 
+}
+
+.view-details-link {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+
+  </style>
+  <title>Hotels in Chandrapur</title>
+</head>
+<body>
+<div class="container">
+  <h1 class="heading">Hotels in Chandrapur</h1>
+  <div class="filter">
+    <h2>Price Range Filter</h2>
+    <label for="priceRange">Select Price Range:</label>
+    <select id="priceRange">
+      <option value="all">All</option>
+      <option value="2000-3000">2000 - 3000</option>
+      <option value="3000-4000">3000 - 4000</option>
+      <option value="4000-5000">4000 - 5000</option>
+
+    </select>
+    <button id="filterButton">Apply Filters</button>
+  </div>
+  <div class="hotel" data-price="3212">
+    <img src="https://pix8.agoda.net/hotelImages/38543771/0/612d5023c162f88b21ea7a5852764830.jpg?ce=0&s=1024x768" alt="Hotel 1">
+    <div class="hotel-description">
+      <h2><a href="Avadale.html" class="hotel-name"> Avadale Tadoba 
+
+    </a></h2>
+      <p class="location">Avadale Tadoba, Moharli, Chandrapur, India, 442404  <br><br>
+        &#8377; 3212 per room per night</p>
+      <p class="description">Conveniently situated in the Moharli part of Chandrapur, this property puts you close to attractions and interesting dining options. As an added bonus, restaurant is provided on-site to conveniently serve your needs.
+
+
+      </p>
+      <button class="view-details-button"><a href="Avadale.html" class="view-details-link">View Details</a></button>
+    </div>
+  </div>
+
+  <div class="hotel" data-price="2500">
+    <img src="https://pix8.agoda.net/hotelImages/31677947/0/0db2d1f94dddd504336ec6b195597330.jpg?ca=29&ce=0&s=1024x768" alt="Hotel 2">
+    <div class="hotel-description">
+      <h2><a href="Red Earth.html" class="hotel-name">Red Earth Tadoba
+
+    </a></h2>
+      <p class="location">Pimpalkutt, Zarri gate, Chandrapur dist., Maharashtra., India , Lohara Village, Chandrapur, India, 441225 <br>
+      <br>
+        &#8377; 2500 per room per night <br>
+      </p>
+      <p class="description">
+        The car parking and the Wi-Fi are always free, so you can stay in touch and come and go as you please. Conveniently situated in the Lohara Village part of Chandrapur, this property puts you close to attractions and interesting dining options. Rated with 4 stars, this high-quality property provides guests with access to restaurant, indoor pool and spa on-site.
+      </p>
+      <button class="view-details-button"><a href="Red Earth.html" class="view-details-link">View Details</a></button>
+    </div>
+  </div>
+
+  <div class="hotel" data-price="4980">
+    <img src="https://pix8.agoda.net/hotelImages/27804456/0/38f9e96ca0c12a25c2f8928d08cdebcb.jpg?ca=21&ce=0&s=1024x768" alt="Hotel 3">
+    <div class="hotel-description">
+      <h2><a href="Tadoba Jungle.html" class="hotel-name">Tadoba Jungle Camp
+    </a></h2>
+      <p class="location">Moharli, Chandrapur, India<br>        <br>
+        &#8377; 4980 per room per night
+      </p>
+      <p class="description">Conveniently situated in the Moharli part of Chandrapur, this property puts you close to attractions and interesting dining options. This 4-star property is packed with in-house facilities to improve the quality and joy of your stay.
+
+
+      </p>
+      <button class="view-details-button"><a href="Tadoba Jungle.html" class="view-details-link">View Details</a></button>
+    </div>
+  </div>
+
+  <div class="hotel" data-price="1847">
+    <img src="https://pix8.agoda.net/hotelImages/36922588/0/c6dd4253dac1d486122d9596248c8764.jpg?ce=0&s=1024x768" alt="Hotel 4">
+    <div class="hotel-description">
+      <h2><a href="Irai Safari.html" class="hotel-name">IRAI SAFARI RETREAT
+
+    </a></h2>
+      <p class="location">Main Ring Rd, Moharli, Chandrapur, India, 442404
+        <br>
+        <br>
+        &#8377; 1847 per room per night
+      </p>
+      <p class="description">Get your trip off to a great start with a stay at this property, which offers free Wi-Fi in all rooms. Conveniently situated in the Moharli part of Chandrapur, this property puts you close to attractions and interesting dining options. This 3-star property is packed with in-house facilities to improve the quality and joy of your stay.
+      </p>
+      <button class="view-details-button"><a href="Irai Safari.html" class="view-details-link">View Details</a></button>
+    </div>
+  </div>
+</div>
+<script>
+  const priceRangeSelect = document.getElementById('priceRange');
+  const filterButton = document.getElementById('filterButton');
+  const hotels = document.querySelectorAll('.hotel');
+
+  filterButton.addEventListener('click', applyFilters);
+
+  function applyFilters() {
+    const selectedPriceRange = priceRangeSelect.value;
+
+    hotels.forEach((hotel) => {
+      const price = parseInt(hotel.getAttribute('data-price'));
+
+      if (selectedPriceRange === 'all' || (price >= parseInt(selectedPriceRange.split('-')[0]) && price <= parseInt(selectedPriceRange.split('-')[1]))) {
+        hotel.style.display = 'flex';
+      } else {
+        hotel.style.display = 'none';
+      }
+    });
+  }
+</script>
+</body>
+</html>

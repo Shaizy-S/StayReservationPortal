@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  /* Reset CSS */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  /* Global styles */
+  body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to left, #ffcccc, #d4ebf2);
+    font-size: 16px;
+  }
+  .filter {
+      background-color: #fff;
+      border: 2px solid black;
+      padding: 10px;
+      margin-bottom: 20px;
+    }
+
+    /* Style for the label and select elements within the filter container */
+    .filter label {
+      font-weight: bold;
+    }
+
+    .filter select {
+      width: 100px;
+      padding: 5px;
+    }
+
+    /* Style for the Apply Filters button */
+    .filter button {
+      background-color: #244572;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+
+    .filter button:hover {
+      background-color: #44b4d5;
+    }
+
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  /* Heading styles */
+  .heading {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  /* Hotel styles */
+  .hotel {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    border: 2px solid black;
+    padding: 20px;
+    background-color: #fff;
+  }
+
+  .hotel img {
+    width: 300px;
+    height: auto;
+    margin-right: 20px;
+    object-fit: cover;
+  }
+
+  .hotel-description {
+    flex: 1;
+  }
+
+  /* Hotel name styles */
+  .hotel-name {
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: #333;
+  }
+
+  /* Location styles */
+  .location {
+    font-size: 1rem;
+    color: #666;
+    margin-top: 10px;
+  }
+
+  /* Description styles */
+  .description {
+    font-size: 1rem;
+    color: #333;
+    margin-top: 10px;
+  }
+
+  /* View details button styles */
+  .view-details-button {
+    background-color: #244572;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+  }
+
+  .view-details-button:hover {
+    background-color: #44b4d5;
+  }
+
+  .view-details-link {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+</style>
+<title>Hotels in Akola</title>
+</head>
+<body>
+<div class="container">
+  <h1 class="heading">Hotels in Akola</h1>
+  <div class="filter">
+    <h2>Price Range Filter</h2>
+    <label for="priceRange">Select Price Range:</label>
+    <select id="priceRange">
+      <option value="all">All</option>
+      <option value="2000-3000">2000 - 3000</option>
+      <option value="3000-4000">3000 - 4000</option>
+      <option value="4000-5000">4000 - 5000</option>
+
+    </select>
+    <button id="filterButton">Apply Filters</button>
+  </div>
+  <div class="hotel" data-price="3686">
+    <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1b/18/ba/ab/img-20200306-213459-largejpg.jpg?w=900&h=-1&s=1" alt="Hotel 1">
+    <div class="hotel-description">
+      <h2><a href="hotel jasnagra.html" class="hotel-name">Hotel Jasnargr </a></h2>
+      <p class="location">
+        Gaddam Plot Road near Railway Station, Akola<br>
+        
+         Rs. 3,686 per room per night
+      </p>
+      <p class="description">
+
+        Travel Sustainable Level 1<br>
+        See why so many travellers make Hotel Jasnagra their hotel of choice when visiting Akola. Providing an ideal mix of value, comfort and convenience, it offers a family-friendly setting with an array of amenities designed for travellers like you.
+      </p> <br>
+      <button class="view-details-button"><a href="hotel jasnagra.html" class="view-details-link">View Details</a></button>
+    </div>
+  </div>
+
+  <div class="hotel" data-price="3206">
+    <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/23/3f/13/d0/rs-exclusive-stay-fine.jpg?w=900&h=-1&s=1" alt="Hotel 2">
+    <div class="hotel-description">
+      <h2><a href="Rs exclusive.html" class="hotel-name">Rs Exclusive Stay</a></h2>
+      <p class="location">Railway Station Road Near Shah Hospital, Akola
+       
+       Rs. 3,206 1 room per night
+      </p>
+      <p class="description">
+        Travel Sustainable Level 2<br>
+     very nice stay, good ambience, very neat n clean rooms. Staff very courteous. Good location near Railway Station. Tasty breakfast. Good stay for family.</p> <br>
+      <button class="view-details-button"><a href="Rs exclusive.html" class="view-details-link">View Details</a></button>
+    </div>
+  </div>
+
+  <div class="hotel" data-price="4890">
+    <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/22/1e/ce/a8/rg-exclusive-stay-fine.jpg?w=900&h=-1&s=1" alt="Hotel 3">
+    <div class="hotel-description">
+      <h2><a href="RG exclusive Stay.html" class="hotel-name">Rg Exclusive Stay</a></h2>
+      <p class="location">
+        Murtizapur Road Near Ramlata Business Center, Akola<br>
+         <br>
+     Rs. 4890 per room per night
+      </p>
+      <p class="description">
+        Travel Sustainable Level 1<br>
+        The RG Exclusive Stay & Fine Dine is a new-age business class hotel with upscale amenities. Hotel RG Exclusive welcomes you with excellent hotel facilities and services for the guests at affordable prices.</p><br>
+      <button class="view-details-button"><a href="RG exclusive Stay.html" class="view-details-link">View Details</a></button>
+    </div>
+  </div>
+
+  <div class="hotel" data-price="2000">
+    <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/07/e4/52/99/hotel-shagun.jpg?w=900&h=-1&s=1" alt="Hotel 4">
+    <div class="hotel-description">
+      <h2><a href="Hotel shagun.html" class="hotel-name">Hotel Shagun</a></h2>
+      <p class="location">
+        Near Brahman Sabha, Jatharpeth, Akola<br>
+        Travel Sustainable Level 2 <br>
+        Ai mins away <br>
+        Rs. 2,000 per room per night
+      </p>
+      <pclass="description">
+        Everyone needs a place to lay their weary head. For travellers visiting Akola, Hotel Shagun is an excellent choice for rest and rejuvenation.
+
+        The rooms offer air conditioning, a kitchenette, and extra long beds, and getting online is possible, as free wifi is available, allowing you to rest and refresh with ease.
+      </p> <br>
+      <button class="view-details-button"><a href="Hotel shagun.html" class="view-details-link">View Details</a></button>
+    </div>
+  </div>
+</div>
+<script>
+  const priceRangeSelect = document.getElementById('priceRange');
+  const filterButton = document.getElementById('filterButton');
+  const hotels = document.querySelectorAll('.hotel');
+
+  filterButton.addEventListener('click', applyFilters);
+
+  function applyFilters() {
+    const selectedPriceRange = priceRangeSelect.value;
+
+    hotels.forEach((hotel) => {
+      const price = parseInt(hotel.getAttribute('data-price'));
+
+      if (selectedPriceRange === 'all' || (price >= parseInt(selectedPriceRange.split('-')[0]) && price <= parseInt(selectedPriceRange.split('-')[1]))) {
+        hotel.style.display = 'flex';
+      } else {
+        hotel.style.display = 'none';
+      }
+    });
+  }
+</script>
+</body>
+</html>

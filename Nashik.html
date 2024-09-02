@@ -1,0 +1,262 @@
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    /* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Global styles */
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to left, #ffcccc, #d4ebf2);
+  font-size: 16px;
+}
+.filter {
+      background-color: #fff;
+      border: 2px solid black;
+      padding: 10px;
+      margin-bottom: 20px;
+    }
+
+    /* Style for the label and select elements within the filter container */
+    .filter label {
+      font-weight: bold;
+    }
+
+    .filter select {
+      width: 100px;
+      padding: 5px;
+    }
+
+    /* Style for the Apply Filters button */
+    .filter button {
+      background-color: #244572;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+
+    .filter button:hover {
+      background-color: #44b4d5;
+    }
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Heading styles */
+.heading {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Hotel styles */
+.hotel {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  border: 2px solid black;
+  padding: 20px;
+  background-color: #fff;
+}
+
+.hotel img {
+  width: 300px;
+  height: auto;
+  margin-right: 20px;
+  object-fit: cover;
+}
+
+.hotel-description {
+  flex: 1;
+}
+
+/* Hotel name styles */
+.hotel-name {
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: #333;
+}
+
+/* Location styles */
+.location {
+  font-size: 1rem;
+  color: #666;
+  margin-top: 10px;
+}
+
+/* Description styles */
+.description {
+  font-size: 1rem;
+  color: #333;
+  margin-top: 10px;
+}
+
+/* View details button styles */
+.view-details-button {
+  background-color: #244572;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 10px;
+}
+
+.view-details-link {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+/* View details button styles */
+.view-details-button {
+  background-color: #244572;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 10px;
+  transition: background-color 0.3s ease; /* Adding a smooth transition effect */
+}
+
+.view-details-button:hover {
+  background-color: #44b4d5; 
+}
+
+.view-details-link {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* View details link styles */
+.view-details-link {
+  text-decoration: none; /* Remove underline */
+  color: #fff; /* Set the desired color */
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: color 0.3s ease; /* Adding a smooth transition effect */
+}
+
+.view-details-link:hover {
+  color: #fff; /* Ensure the color stays the same on hover */
+}
+/* Hotel name styles */
+.hotel-name a {
+  text-decoration: none; /* Remove underline */
+  color: #400564; /* Set the desired color */
+}
+
+/* Hotel name hover effect */
+.hotel-name a:hover {
+  color: #591050; /* Ensure the color stays the same on hover */
+}
+
+
+
+  </style>
+  <title>Hotels in Nashik</title>
+</head>
+<body>
+<div class="container">
+  <h1 class="heading">Hotels in Nashik</h1>
+  <div class="filter">
+    <h2>Price Range Filter</h2>
+    <label for="priceRange">Select Price Range:</label>
+    <select id="priceRange">
+      <option value="all">All</option>
+      <option value="1000-4000">1000 - 4000</option>
+      <option value="4000-6000">3000 - 6000</option>
+      <option value="6000-12000">6000-12000</option>
+
+    </select>
+    <button id="filterButton">Apply Filters</button>
+  </div>
+  <div class="hotel" data-price="11000">
+    <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTm12KEmTSqoL7TCmwEgSxSjfhGPAlpyyJhAe65j2SFT0Ymt0ivy48RfcbtJO5T" alt="The Gateway Hotel Ambad,Nashik">
+    <div class="hotel-description">
+<div class="hotel-name">
+      <h2><a href="N1.html">The Gateway Hotel Ambad,Nashik</a></h2>
+    </div>
+      <p class="location">
+        5 Star Hotel in Nashik<br>
+        P 17, MIDC Ambad, Agra Road, Nashik, Maharashtra, 422010, India<br>
+        <br>
+       
+                 Price per night: &#8377; 11000
+      </p>
+      <p class="description">
+        The Gateway Hotel Nashik in Ambad is surrounded by 20 acres of lush, landscaped gardens. The facilities and amenities at our 5 star hotel in Nashik are designed to give modern travellers a new-age experience that resonates with their upbeat lifestyle.
+      </p>
+      <button class="view-details-button"><a href="N1.html" class="view-details-link">View Details</a></button>
+    </div>
+  </div>
+
+  <div class="hotel" data-price="5546">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScvvjuq5wdBDjKut4zX4xZeXe1iNUaRnBdJA4msmWp38pG5-0Y-5yRr7YAfEoZ" alt=" Radisson Blu Hotel & Spa, Nashik
+    ">
+           
+    <div class="hotel-description">
+        <div class="hotel-name">
+                <h2><a href="N2.html"> Radisson Blu Hotel & Spa, Nashik
+                </a></h2></div>
+                <p class="location">
+                    289/2 Pathardi Phata, Nashik, Maharashtra,422010,India
+                <br> Price per night: &#8377; 5546
+                </p>
+      <p class="description">
+        An unparalleled luxury lifestyle experience awaits you at Radisson Blu Hotel & Spa, Nashik Nestled at the foothills of the two-millennia-old Pandav Caves, discover an idyllic setting for a luxury getaway at the Radisson Blu Hotel & Spa, Nashik. This modern 5-star urban hotel, positioned as the flagship property of the group, boasts unparalleled views of the mountains and untouched scenery fringed by abundant lush green landscape. 
+      </p>
+      <button class="view-details-button"><a href="N2.html" class="view-details-link">View Details</a></button>
+    </div>
+  </div>
+
+  <div class="hotel" data-price="3854">
+    <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSDZnY_jCcOIa7tjHjwtPjCYQ_Ynsd1faW5R_wkSvfQlPOwE6KHx1fzVLSJ6wML" alt="Courtyard by Marriott Nashik">
+    <div class="hotel-description">
+        <div class="hotel-name"> <h2><a href="N3.html">Courtyard by Marriott Nashik</a></h2></div>
+        This four-star hotel is located in the Ambad Industrial Estate, about 10 km from the city center.
+                <p class="location">
+                    
+                Price per night: &#8377; 3854</p>
+      <p class="description">
+        It offers spacious and well-appointed rooms and suites, as well as a variety of amenities, including a swimming pool, a spa, a fitness center, and several restaurants.
+      </p>
+      <button class="view-details-button"><a href="N3.html" class="view-details-link">View Details</a></button>
+    </div>
+  </div>
+  <script>
+    const priceRangeSelect = document.getElementById('priceRange');
+    const filterButton = document.getElementById('filterButton');
+    const hotels = document.querySelectorAll('.hotel');
+  
+    filterButton.addEventListener('click', applyFilters);
+  
+    function applyFilters() {
+      const selectedPriceRange = priceRangeSelect.value;
+  
+      hotels.forEach((hotel) => {
+        const price = parseInt(hotel.getAttribute('data-price'));
+  
+        if (selectedPriceRange === 'all' || (price >= parseInt(selectedPriceRange.split('-')[0]) && price <= parseInt(selectedPriceRange.split('-')[1]))) {
+          hotel.style.display = 'flex';
+        } else {
+          hotel.style.display = 'none';
+        }
+      });
+    }
+  </script>
+</body>
+</html>
+

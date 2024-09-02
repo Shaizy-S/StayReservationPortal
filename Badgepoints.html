@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Badge Points Program</title>
+    <style>
+        /* Background image */
+        body {
+            background-image: url(http://getwallpapers.com/wallpaper/full/a/4/4/347626.jpg);
+            background-size: cover;
+            background-position: center;
+            font-family: 'Arial', sans-serif;
+            color: #fff; /* Set the text color to white for better visibility */
+            font-size: 18px;
+            margin: 20px;
+            padding: 20px;
+            position: relative;
+        }
+
+        /* Background overlay to improve text readability */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(135, 108, 108, 0.5); /* Overlay color and transparency */
+            z-index: -1;
+        }
+
+        /* CSS for enhanced styling */
+        h3 {
+            text-align: center;
+            font-size: 2em;
+            color: rgb(248, 216, 32); /* Golden color for the heading */
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Add a subtle text shadow */
+        }
+
+        p {
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+
+        ul {
+            padding-left: 20px;
+            margin-bottom: 20px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        strong {
+            color: #ffd700; /* Golden color for strong/bold text */
+        }
+
+        /* Stylish border for list items */
+        li::before {
+            content: "\2022"; /* Unicode character for a bullet point */
+            color: #ffd700;
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+        }
+
+        /* Unique style for the discount redemption section */
+        p strong:first-of-type {
+            display: block;
+            font-size: 1.5em;
+            color: #ffd700; /* Golden color */
+            text-align: center;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Add a subtle text shadow */
+        }
+
+        /* Stylish border for the discount utilization conditions section */
+        ul:last-of-type {
+            border: 2px solid #ffd700; /* Golden color border */
+            border-radius: 10px;
+            padding: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <h3>Badge Points Program</h3>
+    
+    <div style="background-color: rgba(0, 0, 0, 0.7); padding: 15px; border-radius: 10px; margin-bottom: 20px;">
+        <p><strong>1. Badge Points Accumulation:</strong></p>
+        <ul>
+            <li>Users will accumulate badge points as a reward for their engagement and loyalty on our hotel booking platform.</li>
+            <li>For each hotel booking, users will receive a fixed 500 badge points. These points will be automatically credited to their account upon successful booking completion.</li>
+            <li>Users can track their badge points in their account profile.</li>
+        </ul>
+    </div>
+    
+    <div style="background-color: rgba(0, 0, 0, 0.7); padding: 15px; border-radius: 10px; margin-bottom: 20px;">
+        <p><strong>2. Discount Redemption:</strong></p>
+        <p><strong>Users who have amassed a minimum of 500 badge points are eligible for a special discount of 500 INR on their next hotel booking.</strong></p>
+        <ul>
+            <li>To redeem this discount, users must ensure that they have at least 500 badge points in their account at the time of making the new booking.</li>
+            <li>This discount can be applied to the total cost of the next booking, resulting in a 500 INR reduction in the booking price.</li>
+        </ul>
+    </div>
+    
+    <div style="background-color: rgba(0, 0, 0, 0.7); padding: 15px; border-radius: 10px;">
+        <p><strong>3. Discount Utilization Conditions:</strong></p>
+        <ul>
+            <li>The discount is applicable exclusively to the next booking made on our platform.</li>
+            <li>If a user has accumulated 500 or more badge points, they have the option to either redeem the discount or continue accumulating points for future use.</li>
+            <li>Users are encouraged to maintain their badge point collection at or above 500 to take full advantage of this discount benefit.</li>
+            <li>The discount will not have a cash equivalent and can only be applied within our platform for hotel bookings.</li>
+            <li>This policy aims to motivate and reward users for their loyalty and continued engagement with our hotel booking service. It provides a tangible benefit in the form.</li>
+        </ul>
+    </div>
+</body>
+</html>
